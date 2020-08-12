@@ -48,6 +48,23 @@ Se trata de un perro que logró la inmortalidad y poderes mágicos al ¿comer ch
 - [Pastor De Los Pirineos](https://www.purina.es/perros/razas-de-perro/pastor-de-los-pirineos)
 - [Husky Siberiano](https://www.purina.es/perros/razas-de-perro/husky-siberiano)
 
+## Mecánicas
+
+### Sí o sí
+
+- Conversaciones
+    - ¿Marcar opciones que ya se han explorado pero permitir repetirlas?
+- Buscar pistas y preguntar sobre ellas
+- Puntos de buen dueño / mal dueño que decidan el final (juicio del perro mágico).
+    - Por ejemplo, con Marcos puedes negociar seguirle el patreón (bueno / neutral) o denunciar su cuenta en YouDog! (malo).
+    - ¿Disponibles desde el principio o es condicional?
+
+### Opcional si da tiempo
+
+- Fichas de personajes
+- Bloc de notas con perquisas realizadas y pistas.
+    - ¿El usuario puede editar directamente el bloc de notas aparte de añadir pistas sugeridas desde el juego?
+
 ## Bibliografía
 
 - [Biblioteca de razas | PURINA](https://www.purina.es/perros/razas-de-perro/tipos-de-razas-de-perro)
