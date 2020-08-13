@@ -3,6 +3,8 @@ init:
     default marcos_clue_computer_seen = False
 
 label marcos:
+    $ current_dog = "Marcos"
+
     scene bg marcos bedroom
     with dissolve
 
@@ -91,9 +93,9 @@ label marcos_dialogue_menu:
 
         "\"[basic_dialogue_woof!t]\"":
             jacob "[basic_dialogue_woof!t]"
-            hannah "I agree. Literature clubs are so much more than meets the eye"
+            marcos "I agree. Literature clubs are so much more than meets the eye"
             jacob "What?"
-            hannah "Nothing"
+            marcos "Nothing"
             jump marcos_dialogue_menu
 
         "[basic_dialogue_search_clues!t]":

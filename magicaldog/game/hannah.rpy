@@ -4,10 +4,10 @@ init:
     default hannah_clue_radio_seen = False
 
 label hannah:
+    $ current_dog = "Hannah"
+
     scene bg hannah bedroom
     with dissolve
-
-    $ current_dog = "Hannah"
 
     show hannah normal
     with dissolve

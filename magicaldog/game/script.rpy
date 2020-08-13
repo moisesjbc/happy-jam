@@ -17,7 +17,7 @@ init:
 
 label start:
     # TODO: Remove
-    jump hannah
+    jump lara
 
     show bg intro
     "Hi!"
@@ -92,13 +92,3 @@ screen clues_back_screen():
     frame:
         vbox:
             textbutton "Back" action Return()
-
-label lara:
-    scene bg lara bedroom
-    with dissolve
-
-    show lara normal
-    with dissolve
-
-    lara "Hi!"
-    jump dog_selector_menu
