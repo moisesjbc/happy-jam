@@ -9,9 +9,14 @@ label start:
     "But I am rich now!"
     "Since then I live in a mansion with my three dogs"
 
-    # TODO: Add transitions.
+    show hannah normal at left
+    with dissolve
     "Hannah..."
+    show marcos normal
+    with dissolve
     "Marcos..."
+    show lara normal at right
+    with dissolve
     "...and Lara"
 
     "A few days ago I went into the kitchen and discovered something"
@@ -29,6 +34,6 @@ label start:
     "The prize for my heroism!"
     "My most precious possesion!"
     "My rock!"
-    "<Sigh>"
+    "*Sigh*"
     "That's it!"
     "I am going to discover the guilty, no matter what!"
