@@ -87,15 +87,11 @@ label dog_selector_menu:
         "Lara, Du'uh":
             jump lara
 
-label marcos:
-    scene bg marcos bedroom
-    with dissolve
-
-    show marcos normal
-    with dissolve
-
-    marcos "What's up?"
-    jump dog_selector_menu
+screen clues_back_screen():
+    zorder 100
+    frame:
+        vbox:
+            textbutton "Back" action Return()
 
 label lara:
     scene bg lara bedroom

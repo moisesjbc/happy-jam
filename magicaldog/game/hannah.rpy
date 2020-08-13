@@ -49,11 +49,6 @@ label hannah_dialogue_menu:
             "Let's see what I find"
             jump hannah_clues
 
-        "\"[basic_dialogue_exit!t]\"":
-            jacob "[basic_dialogue_exit!t]"
-            hannah "Bye sir!"
-            jump dog_selector_menu
-
         "\"Can I check your security system?\"" if hannah_clue_record_seen:
             jacob "\"Can I check your security system?\""
             hannah "Nope"
@@ -93,6 +88,11 @@ label hannah_dialogue_menu:
             jacob "The war ended years ago"
             hannah "A soldier must be always prepared, sir"
             jump hannah_dialogue_menu
+
+        "\"[basic_dialogue_exit!t]\"":
+            jacob "[basic_dialogue_exit!t]"
+            hannah "Bye sir!"
+            jump dog_selector_menu
 
     jump dog_selector_menu
 
@@ -175,7 +175,7 @@ label hannah_clues:
     show screen hannah_clue_record
     show screen hannah_clue_photos
     show screen hannah_clue_radio
-    call screen hannah_clues_screen
+    call screen clues_back_screen
 
     hide screen hannah_clue_record
     hide screen hannah_clue_photos
