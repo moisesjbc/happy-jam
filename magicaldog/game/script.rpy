@@ -11,6 +11,10 @@ init:
     $ basic_dialogue_search_clues = "Search for clues"
     $ basic_dialogue_exit = "Bye"
 
+    # Flag set to true while the player is viewing a clue, so clue buttons
+    # are disabled while doing it.
+    default seeing_clue = False
+
 label start:
     # TODO: Remove
     jump hannah

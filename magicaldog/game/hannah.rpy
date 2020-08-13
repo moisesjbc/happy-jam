@@ -1,6 +1,7 @@
 init:
     default hannah_clue_record_seen = False
     default hannah_clue_photos_seen = False
+    default hannah_clue_radio_seen = False
 
 label hannah:
     scene bg hannah bedroom
@@ -84,6 +85,15 @@ label hannah_dialogue_menu:
             "... or do I?"
             jump hannah_dialogue_menu
 
+        "\"What is the radio for?\"" if hannah_clue_photos_seen:
+            jacob "What is the radio for?"
+            hannah "It's for notifying all the dogs in the neighborhour"
+            hannah "In case of a cat attack"
+            jacob "..."
+            jacob "The war ended years ago"
+            hannah "A soldier must be always prepared, sir"
+            jump hannah_dialogue_menu
+
     jump dog_selector_menu
 
 
@@ -96,13 +106,16 @@ screen hannah_clue_record():
         idle "images/object cookies jar.png"
         xpos 100
         ypos 100
-        action Jump("hannah_clue_record_click")
+        if not seeing_clue:
+            action Jump("hannah_clue_record_click")
 
 label hannah_clue_record_click:
-    jacob "This is a system for recording whenever someone enters or leaves Hannah's room"
-    jacob "Mmm..."
-    jacob "I could ask her about it"
+    $ seeing_clue = True
     $ hannah_clue_record_seen = True
+    "This is a system for recording whenever someone enters or leaves Hannah's room"
+    "Mmm..."
+    "I could ask her about it"
+    $ seeing_clue = False
     jump hannah_clues
 
 
@@ -114,13 +127,36 @@ screen hannah_clue_photos():
         idle "images/object cookies jar.png"
         xpos 400
         ypos 200
-        action Jump("hannah_clue_photos_click")
+        if not seeing_clue:
+            action Jump("hannah_clue_photos_click")
 
 label hannah_clue_photos_click:
-    jacob "These are..."
-    jacob "Photos of my golden sandwich!"
-    jacob "I must ask her about these!"
+    $ seeing_clue = True
     $ hannah_clue_photos_seen = True
+    "These are..."
+    "Photos of my golden sandwich!"
+    "I must ask her about these!"
+    $ seeing_clue = False
+    jump hannah_clues
+
+
+# CLUE - Radio
+###############################################################################
+
+screen hannah_clue_radio():
+    imagebutton:
+        idle "images/object cookies jar.png"
+        xpos 600
+        ypos 200
+        if not seeing_clue:
+            action Jump("hannah_clue_radio_click")
+
+label hannah_clue_radio_click:
+    $ seeing_clue = True
+    $ hannah_clue_photos_seen = True
+    "A radio?..."
+    "...why?"
+    $ seeing_clue = False
     jump hannah_clues
 
 
@@ -138,10 +174,12 @@ label hannah_clues:
     show screen notify(message="Search possible clues and click on them to interact")
     show screen hannah_clue_record
     show screen hannah_clue_photos
+    show screen hannah_clue_radio
     call screen hannah_clues_screen
 
     hide screen hannah_clue_record
     hide screen hannah_clue_photos
+    hide screen hannah_clue_radio
 
     "Enough for now"
     jump hannah_dialogue_menu
