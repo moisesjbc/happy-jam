@@ -5,7 +5,7 @@ define lara = Character('Lara', color="#c8c8ff")
 
 label start:
     # TODO: Remove
-    jump dog_selector_menu
+    jump hannah
 
     show bg intro
     "Hi!"
@@ -90,6 +90,7 @@ label hannah:
     $ basic_dialogue_last_night_notice_something = "Did you see or hear something strange last night at 10 PM?"
     $ basic_dialogue_throw_ball = "Throw ball and see if something magic happens"
     $ basic_dialogue_woof = "Mmmm... woof?"
+    $ basic_dialogue_search_clues = "Search for clues"
     $ basic_dialogue_exit = "Bye"
 
 label hannah_dialogue_menu:
@@ -123,12 +124,52 @@ label hannah_dialogue_menu:
             hannah "Nothing"
             jump hannah_dialogue_menu
 
+        "[basic_dialogue_search_clues!t]":
+            "Let's see what I find"
+            jump hannah_clues
+
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             hannah "Bye sir!"
             jump dog_selector_menu
 
+        "\"Can I check your security system?\"" if hannah_clue_record_seen:
+            jacob "\"Can I check your security system?\""
+            hannah "Nope"
+
     jump dog_selector_menu
+
+default hannah_clue_record_seen = False
+
+label hannah_clue_record_click:
+    jacob "This is a system for recording whenever someone enters or leaves Hannah's room"
+    jacob "Mmm..."
+    jacob "I could ask her about it"
+    $ hannah_clue_record_seen = True
+    jump hannah_clues
+
+screen hannah_clue_record():
+    # Source: <https://lemmasoft.renai.us/forums/viewtopic.php?t=19168>
+    imagebutton:
+        idle "images/object cookies jar.png"
+        xpos 100
+        ypos 100
+        action Jump("hannah_clue_record_click")
+
+screen hannah_clues_screen():
+    zorder 100
+    frame:
+        vbox:
+            textbutton "Back" action Return()
+
+label hannah_clues:
+    show bg bedroom
+    show screen notify(message="Search possible clues and click on them to interact")
+    show screen hannah_clue_record
+    call screen hannah_clues_screen
+    hide screen hannah_clue_record
+    "Enough for now"
+    jump hannah_dialogue_menu
 
 label marcos:
     scene bg marcos bedroom
