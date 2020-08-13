@@ -4,6 +4,9 @@ define marcos = Character('Marcos', color="#c8ffc8")
 define lara = Character('Lara', color="#c8c8ff")
 
 label start:
+    # TODO: Remove
+    jump dog_selector_menu
+
     show bg intro
     "Hi!"
     "My name is Jacob. I'm 20"
@@ -62,7 +65,7 @@ label start:
 label dog_selector_menu:
     scene bg intro
 
-    "Who should I question first?"
+    "Who should I question now?"
 
     menu:
         "Obviously Hannah":
@@ -76,10 +79,55 @@ label hannah:
     scene bg hannah bedroom
     with dissolve
 
+    $ current_dog = "Hannah"
+
     show hannah normal
     with dissolve
 
     hannah "Hello, sir!"
+
+    $ basic_dialogue_last_night_excuse = "Where were you last night at 10 PM?"
+    $ basic_dialogue_last_night_notice_something = "Did you see or hear something strange last night at 10 PM?"
+    $ basic_dialogue_throw_ball = "Throw ball and see if something magic happens"
+    $ basic_dialogue_woof = "Mmmm... woof?"
+    $ basic_dialogue_exit = "Bye"
+
+label hannah_dialogue_menu:
+    menu:
+        "\"[basic_dialogue_last_night_excuse!t]\"":
+            jacob "[basic_dialogue_last_night_excuse!t]"
+            hannah "It was bed time, sir, so obviously I was here"
+            jump hannah_dialogue_menu
+
+        "\"[basic_dialogue_last_night_notice_something!t]\"":
+            jacob "[basic_dialogue_last_night_notice_something!t]"
+            hannah "In fact I did, sir"
+            hannah "I saw Lara burrying something in the garden"
+            "Mmm..."
+            jump hannah_dialogue_menu
+
+        "[basic_dialogue_throw_ball!t]":
+            "Suddenly I throw a toy ball to [current_dog]"
+            hannah "!"
+            hannah "What is the meaning of this, sir!"
+            hannah "This is highly innapropiate for a superior!"
+            hannah "For a dog, at least!"
+            jacob "Sorry"
+            "Maybe [current_dog] is not the one with magical powers?"
+            jump hannah_dialogue_menu
+
+        "\"[basic_dialogue_woof!t]\"":
+            jacob "[basic_dialogue_woof!t]"
+            hannah "Lalilulelo"
+            jacob "What?"
+            hannah "Nothing"
+            jump hannah_dialogue_menu
+
+        "\"[basic_dialogue_exit!t]\"":
+            jacob "[basic_dialogue_exit!t]"
+            hannah "Bye sir!"
+            jump dog_selector_menu
+
     jump dog_selector_menu
 
 label marcos:
