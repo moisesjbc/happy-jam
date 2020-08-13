@@ -2,6 +2,7 @@ define jacob = Character('Jaboc', color="#c8c8ff")
 
 
 label start:
+    show bg intro
     "Hi!"
     "My name is Jacob. I'm 20"
     "A year ago I won a world record eating the highest number of sandwiches in my garage"
@@ -21,6 +22,8 @@ label start:
 
     "A few days ago I went into the kitchen and discovered something"
     # TODO: Add animation
+    show bg kitchen
+
     "It seems that one of them is a magical dog"
     "...or maybe all of them!"
     "No one of them said anything"
