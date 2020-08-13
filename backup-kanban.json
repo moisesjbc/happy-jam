@@ -1,0 +1,173 @@
+{
+  "name": "happy-jam",
+  "numberOfColumns": 3,
+  "columns": [
+    {
+      "name": "ToDo",
+      "cards": [
+        {
+          "name": "Textos y placeholders - Intro",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - menú",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Conversación básica - Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Buscar pistas - Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Conversación básica - Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Buscar pistas - Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Conversación básica - Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Buscar pistas - Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "[Split] Terminar pruebas",
+          "details": "",
+          "color": "FCC7FC"
+        },
+        {
+          "name": "Textos y placeholders - Final 1/2",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Final 2/2 - Final bueno",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Final 2/2 - Final malo",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "[Split] Segundo hito: Desarrollar primera mitad (DEFINIR)",
+          "details": "",
+          "color": "FCE4D4"
+        },
+        {
+          "name": "[Split] Desarrollar segunda mitad (DEFINIR)",
+          "details": "",
+          "color": "FCC7FC"
+        },
+        {
+          "name": "[Split] Pulir",
+          "details": "",
+          "color": "FCC7FC"
+        },
+        {
+          "name": "Añadir README",
+          "details": "",
+          "color": "C1F7C2"
+        }
+      ],
+      "settings": {}
+    },
+    {
+      "name": "On going",
+      "cards": [
+        {
+          "name": "Inicializar proyecto Renpy",
+          "details": "",
+          "color": "FAFCD2"
+        }
+      ],
+      "settings": {
+        "limit": 2
+      }
+    },
+    {
+      "name": "Done",
+      "cards": [
+        {
+          "name": "[Split] Primer hito: esbozar personajes e historia",
+          "details": "",
+          "color": "FCE4D4"
+        },
+        {
+          "name": "Esbozar interacción con Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Esbozar interacción con Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Esbozar interacción con Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Decidir mecánicas (consultar Renpy)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Resumen de un párrafo - perro 4",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Resumen de un párrafo - perro 3",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Resumen de un párrafo - perro 2",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Resumen de un párrafo - perro 1",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Resumen de un párrafo - protagonista",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Resumen de un párrafo - historia",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Lluvia de ideas",
+          "details": "",
+          "color": "FAFCD2"
+        }
+      ],
+      "settings": {}
+    }
+  ],
+  "archived": [],
+  "settings": {}
+}
