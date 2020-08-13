@@ -1,5 +1,7 @@
-define jacob = Character('Jacob', color="#c8c8ff")
-
+define jacob = Character('Jacob', color="#ffffff")
+define hannah = Character('Hannah', color="#ffc8c8")
+define marcos = Character('Marcos', color="#c8ffc8")
+define lara = Character('Lara', color="#c8c8ff")
 
 label start:
     show bg intro
@@ -56,3 +58,46 @@ label start:
     "*Sigh*"
     "That's it!"
     "I am going to discover the guilty, no matter what!"
+
+label dog_selector_menu:
+    scene bg intro
+
+    "Who should I question first?"
+
+    menu:
+        "Obviously Hannah":
+            jump hannah
+        "Marcos, of course":
+            jump marcos
+        "Lara, Du'uh":
+            jump lara
+
+label hannah:
+    scene bg hannah bedroom
+    with dissolve
+
+    show hannah normal
+    with dissolve
+
+    hannah "Hello, sir!"
+    jump dog_selector_menu
+
+label marcos:
+    scene bg marcos bedroom
+    with dissolve
+
+    show marcos normal
+    with dissolve
+
+    marcos "What's up?"
+    jump dog_selector_menu
+
+label lara:
+    scene bg lara bedroom
+    with dissolve
+
+    show lara normal
+    with dissolve
+
+    lara "Hi!"
+    jump dog_selector_menu

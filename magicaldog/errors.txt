@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 26: expected ':' not found.
-    label animation
-                   ^
+File "game/script.rpy", line 62: expected 'label_name_declare' not found.
+    label menu:
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 13 11:38:35 2020
+Thu Aug 13 13:54:23 2020
