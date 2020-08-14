@@ -1,6 +1,7 @@
 init:
     default first_time = True
     default marcos_clue_computer_seen = False
+    default marcos_clue_golosines_seen = False
 
 label marcos:
     $ current_dog = "Marcos"
@@ -136,12 +137,26 @@ label marcos_dialogue_menu:
             "Where could I get a microphone?"
             jump marcos_dialogue_menu
 
+        "\"Where did you got those golosines?\"" if marcos_clue_golosines_seen:
+            jacob "Where did you got those golosines?"
+            marcos "From my subscriptors!"
+            marcos "They are awesome!"
+            jump marcos_dialogue_menu
+
+        "\"Can I get some golosines?\"" if marcos_clue_golosines_seen:
+            jacob "Can I get some golosines?"
+            marcos "I think that they are not safe for humans"
+            marcos "But sure!"
+            $ inventory.append("golosines")
+            show screen notify(message="Golosines added to inventory")
+            jump marcos_dialogue_menu
+
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             marcos "Bye!"
             jump dog_selector_menu
 
-    jump dog_selector_menu
+    jump marcos_dialogue_menu
 
 
 # CLUE - Computer
@@ -164,15 +179,39 @@ label marcos_clue_computer_click:
     $ seeing_clue = False
     jump marcos_clues
 
+
+# CLUE - Golosines
+###############################################################################
+
+screen marcos_clue_golosines():
+    # Source: <https://lemmasoft.renai.us/forums/viewtopic.php?t=19168>
+    imagebutton:
+        idle "images/object cookies jar.png"
+        xpos 400
+        ypos 100
+        if not seeing_clue:
+            action Jump("marcos_clue_golosines_click")
+
+label marcos_clue_golosines_click:
+    $ seeing_clue = True
+    $ marcos_clue_golosines_seen = True
+    "Golosines?"
+    "I didn't buy those..."
+    $ seeing_clue = False
+    jump marcos_clues
+
+
 # CLUES screen
 ###############################################################################
 
 label marcos_clues:
     show screen notify(message="Search possible clues and click on them to interact")
     show screen marcos_clue_computer
+    show screen marcos_clue_golosines
     call screen clues_back_screen
 
     hide screen marcos_clue_computer
+    hide screen marcos_clue_golosines
 
     "Enough for now"
     jump marcos_dialogue_menu

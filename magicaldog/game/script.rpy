@@ -15,6 +15,8 @@ init:
     # are disabled while doing it.
     default seeing_clue = False
 
+    default inventory = []
+
 label start:
     # TODO: Remove
     jump lara
@@ -86,6 +88,8 @@ label dog_selector_menu:
             jump marcos
         "Lara, Du'uh":
             jump lara
+        "In fact, I think that I reached a verdict!" if lara_ending:
+            jump ending
 
 screen clues_back_screen():
     zorder 100

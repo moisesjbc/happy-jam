@@ -1,0 +1,4 @@
+
+label ending:
+    ".:. foo."
+    return

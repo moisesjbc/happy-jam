@@ -2,6 +2,7 @@ init:
     default lara_clue_smart_bracelet_seen = False
     default lara_clue_smart_bracelet_investigated = False
     default lara_garden_investigated = False
+    default lara_ending = None
 
 label lara:
     $ current_dog = "Lara"
@@ -69,10 +70,15 @@ label lara_dialogue_menu:
             jacob "Now?"
             "Thinking about it makes me tired"
             "Maybe I really should do excercise every now and then"
+            "Although..."
+            "I could avoid doing excercise and instead offer her some dog golosines"
+            if "golosines" not in inventory:
+                "(I still need to find them, though)"
+            "But she would never forgive me..."
 
             "Would you do it?"
             menu:
-                "\"Ok\"":
+                "\"Ok\" (Do excercise with her)":
                     jacob "Ok..."
                     jacob "What type of excercise?"
                     lara "Mmmm"
@@ -116,20 +122,25 @@ label lara_dialogue_menu:
                     lara "I hope that we could do excercise together more often!"
                     jacob "Sure!"
                     "I try hard not to let her see that I am crying in pain"
+                    $ lara_ending = "true"
+                    jump test_end
 
-                    pause 1.0
-                    "Ok, so it's time to check the bracelet"
-                    pause 1.0
-                    "What the...?"
-                    "According to this, Lara went by my door last night"
-                    "Then she run to the garden..."
-                    $ lara_clue_smart_bracelet_investigated = True
-
-                "\"Maybe later\"":
+                "\"Maybe later\"" if "golosines" not in inventory:
                     lara "..."
                     lara "Ok"
+                    jump lara_dialogue_menu
 
-            jump lara_dialogue_menu
+                "Buy her with golosines" if "golosines" in inventory:
+                    jacob "Oh, what is this?"
+                    "I take the golosines out of my pocket"
+                    lara "Please no!"
+                    with hpunch
+                    "Lara jumps like a lightning and takes the golosines from my hands"
+                    lara "I hate you!"
+                    lara "grrgffgfdsg"
+                    lara "Take it!"
+                    $ lara_ending = "bad"
+                    jump test_end
 
         "Ask her about her movements last night" if lara_clue_smart_bracelet_investigated and not lara_garden_investigated:
             jacob "Oh"
@@ -178,8 +189,16 @@ label lara_dialogue_menu:
             lara "Bye bye!"
             jump dog_selector_menu
 
-    jump dog_selector_menu
+    label test_end:
+        $ lara_clue_smart_bracelet_investigated = True
 
+        pause 1.0
+        "Ok, so it's time to check the bracelet"
+        pause 1.0
+        "What the...?"
+        "According to this, Lara went by my door last night"
+        "Then she run to the garden..."
+        jump lara_dialogue_menu
 
 # CLUE - Smart bracelet
 ###############################################################################
