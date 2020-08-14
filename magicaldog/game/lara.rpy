@@ -198,7 +198,7 @@ label lara_dialogue_menu:
     label test_end:
         $ lara_clue_smart_bracelet_investigated = True
 
-        hide screen bracelet
+        hide screen lara_clue_smart_bracelet
         $ inventory.append("bracelet")
         show screen notify(message="Smart bracelet added to inventory")
 

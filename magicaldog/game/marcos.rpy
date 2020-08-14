@@ -316,7 +316,7 @@ screen marcos_clue_computer():
         idle "images/object computer idle.png"
         hover "images/object computer hover.png"
         xpos 50
-        ypos 350
+        ypos 375
         if on_clues_screen and not seeing_clue:
             action Jump("marcos_clue_computer_click")
 

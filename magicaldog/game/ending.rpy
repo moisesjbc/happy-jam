@@ -7,7 +7,7 @@ label ending:
 
     "So the moment has come"
     "I ask them all to come to the living room"
-    show bg intro
+    scene bg living room
     with dissolve
 
     show hannah normal at left
