@@ -9,6 +9,10 @@ init:
 label hannah:
     $ current_dog = "Hannah"
 
+    show screen hannah_clue_record
+    show screen hannah_clue_photos
+    show screen hannah_clue_radio
+
     scene bg hannah bedroom
     with dissolve
 
@@ -187,6 +191,10 @@ label hannah_dialogue_menu:
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             hannah "Bye sir!"
+
+            hide screen hannah_clue_record
+            hide screen hannah_clue_photos
+            hide screen hannah_clue_radio
             jump dog_selector_menu
 
     jump hannah_dialogue_menu
@@ -208,10 +216,11 @@ label investigate_hannah_record:
 screen hannah_clue_record():
     # Source: <https://lemmasoft.renai.us/forums/viewtopic.php?t=19168>
     imagebutton:
-        idle "images/object cookies jar.png"
-        xpos 100
+        idle "images/object security system idle.png"
+        hover "images/object security system hover.png"
+        xpos 1000
         ypos 100
-        if not seeing_clue:
+        if on_clues_screen and not seeing_clue:
             action Jump("hannah_clue_record_click")
 
 label hannah_clue_record_click:
@@ -232,7 +241,7 @@ screen hannah_clue_photos():
         idle "images/object cookies jar.png"
         xpos 400
         ypos 200
-        if not seeing_clue:
+        if on_clues_screen and not seeing_clue:
             action Jump("hannah_clue_photos_click")
 
 label hannah_clue_photos_click:
@@ -253,7 +262,7 @@ screen hannah_clue_radio():
         idle "images/object cookies jar.png"
         xpos 600
         ypos 200
-        if not seeing_clue:
+        if on_clues_screen and not seeing_clue:
             action Jump("hannah_clue_radio_click")
 
 label hannah_clue_radio_click:
@@ -268,23 +277,10 @@ label hannah_clue_radio_click:
 # CLUES screen
 ###############################################################################
 
-screen hannah_clues_screen():
-    zorder 100
-    frame:
-        vbox:
-            textbutton "Back" action Return()
-
 label hannah_clues:
-    show bg bedroom
     show screen notify(message="Search possible clues and click on them to interact")
-    show screen hannah_clue_record
-    show screen hannah_clue_photos
-    show screen hannah_clue_radio
+    $ on_clues_screen = True
     call screen clues_back_screen
-
-    hide screen hannah_clue_record
-    hide screen hannah_clue_photos
-    hide screen hannah_clue_radio
 
     "Enough for now"
     jump hannah_dialogue_menu

@@ -4,6 +4,7 @@ define marcos = Character('Marcos', color="#c8ffc8")
 define lara = Character('Lara', color="#c8c8ff")
 define cat = Character("Neighbour's cat", color="#aa0000")
 define robert = Character('Robert', color="#FF55FF")
+default on_clues_screen = False
 
 init:
     $ basic_dialogue_last_night_excuse = "Where were you last night at 10 PM?"
@@ -21,7 +22,7 @@ init:
 
 label start:
     # TODO: Remove
-    jump ending
+    jump hannah
 
     show bg intro
     "Hi!"
@@ -97,4 +98,4 @@ screen clues_back_screen():
     zorder 100
     frame:
         vbox:
-            textbutton "Back" action Return()
+            textbutton "Back" action [ SetVariable("on_clues_screen", False), Return()]
