@@ -22,7 +22,7 @@ init:
 
 label start:
     # TODO: Remove
-    jump marcos
+    jump lara
 
     show bg intro
     "Hi!"
