@@ -260,9 +260,10 @@ label hannah_clue_photos_click:
 
 screen hannah_clue_radio():
     imagebutton:
-        idle "images/object cookies jar.png"
-        xpos 600
-        ypos 200
+        idle "images/object radio idle.png"
+        hover "images/object radio hover.png"
+        xpos 50
+        ypos 400
         if on_clues_screen and not seeing_clue:
             action Jump("hannah_clue_radio_click")
 
