@@ -207,9 +207,25 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
+    if len(items) >= 5:
+        viewport:
+            draggable True
+            mousewheel True
+            scrollbars "vertical"
+
+            xsize gui.choice_button_width
+            ysize config.screen_height - 180
+
+            xalign 0.5
+            yalign 0.5
+
+            vbox:
+                for i in items:
+                    textbutton i.caption action i.action
+    else:
+        vbox:
+            for i in items:
+                textbutton i.caption action i.action
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,

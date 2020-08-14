@@ -56,12 +56,16 @@ label hannah_dialogue_menu:
             hannah "And you are, sir!"
             hannah "But this security system is personal"
             hannah "And according to law 1/359880/32 from the dog's code"
+            $ hannah_requires_dog_medal = True
             hannah "A soldier can refuse to give a personal belonging to its superior (*)"
             hannah "(*) Except if the superior is a dog hero"
             jacob "I see"
-            "I could search the law on Internet and see what it takes to be a \"dog hero\""
-            "But the only computer with Internet access in the house belongs to Marcos"
-            $ hannah_about_being_dog_hero = True
+            if "dog medal" not in inventory:
+                "I could search the law on Internet and see what it takes to be a \"dog hero\""
+                "But the only computer with Internet access in the house belongs to Marcos"
+                $ hannah_about_being_dog_hero = True
+            else:
+                "I could show her my dog medal"
             "Or I just could scream \"A cat!\""
             "That would drive her crazy and set a distraction"
             "...but she may never forgive me"
@@ -106,30 +110,30 @@ label hannah_dialogue_menu:
             hannah "No, sir!"
             hannah "Something must be wrong with the system"
             hannah "I spent all the night here, as always!"
-            if $ lara_saw_hannah:
-                jacob "But Hannah also saw you last night"
-                jacob "Leaving my room"
-                hannah "What...?"
-                hannah "..."
-                hannah "I trust Lara. She's a good soldier"
-                hannah "If she saw me, then..."
-                pause 1.0
-                hannah "Maybe I am a sleepwalker?"
-                jacob "And a sleepmagician?..."
-                hannah "What?"
-                jacob "Nothing!"
-                hannah "What the cameras on your room show, sir?"
-                jacob "They..."
-                "I don't want to mention the floating golden sandwich. Just in case"
-                jacob "It's strange"
-                jacob "They don't show you in my room"
-                hannah "That's strange, sir"
-                hannah "Maybe we have been hacked"
-                hannah "Your cameras... my system..."
-                "..."
-                jacob "I'll investigate that"
-                hannah "Me too, sir"
-            $ hannah_clue_record_investigated = True
+
+        "Tell her that hannah saw her last night" if lara_saw_hannah:
+            jacob "Hannah saw you last night..."
+            jacob "Leaving my room"
+            hannah "What...?"
+            hannah "..."
+            hannah "I trust Lara. She's a good soldier"
+            hannah "If she saw me, then..."
+            pause 1.0
+            hannah "Maybe I am a sleepwalker?"
+            jacob "And a sleepmagician?..."
+            hannah "What?"
+            jacob "Nothing!"
+            hannah "What the cameras on your room show, sir?"
+            jacob "They..."
+            "I don't want to mention the floating golden sandwich. Just in case"
+            jacob "It's strange"
+            jacob "They don't show you in my room"
+            hannah "That's strange, sir"
+            hannah "Maybe we have been hacked"
+            hannah "Your cameras... my system..."
+            "..."
+            jacob "I'll investigate that"
+            hannah "Me too, sir"
 
         "\"Why do you have photos of my golden sandwich?!\"" if hannah_clue_photos_seen:
             jacob "Why do you have photos of my golden sandwich?!"
@@ -194,6 +198,7 @@ label investigate_hannah_record:
     "Then two dogs left the room"
     "Later, Hannah entered again, alone"
     "..."
+    $ hannah_clue_record_investigated = True
     jump hannah_dialogue_menu
 
 

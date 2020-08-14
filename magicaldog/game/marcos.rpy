@@ -6,6 +6,7 @@ init:
     default marcos_has_new_microphone = False
     default marcos_ending = None
 
+
 label marcos:
     scene bg marcos bedroom
     with dissolve
@@ -227,6 +228,55 @@ label marcos_dialogue_menu:
             "Marcos laughes nervously"
             jacob "I see"
             "Mmm..."
+
+        "Check law 1/359880/32 on Internet" if marcos_clue_computer_status == "investigated" and hannah_requires_dog_medal:
+            jacob "Can I search something on your computer?"
+            marcos "Sure!"
+            "I search for law 1/359880/32 on Internet"
+            "I got to a PDF with 200 pages"
+            "*Sigh*"
+            "I hope this is worth it"
+            "I search in the document for an eternity until I finally find it"
+            "\"A dog hero is a dog or any other being (NOT A CAT)..."
+            "...that fights a cat and survives\""
+            "So that's it"
+            "..."
+            pause 1.0
+            "Doesn't the neighbour have a cat?"
+            "Fight the neigbour's cat?"
+            menu:
+                "Yes!":
+                    pass
+                "Sure!":
+                    pass
+                "Of course!":
+                    pass
+            "I go to the neighbour's garden"
+            "I spot the neighbour's cat there"
+            "I come close, like a ninja"
+            cat "MEEEEEOOOOOW"
+            with hpunch
+            "Oh my"
+            "We was waiting for me!"
+            with hpunch
+            "Ouch!"
+            with hpunch
+            "Ahhhhggg"
+            "Meeedic!"
+            with hpunch
+            "My arm!"
+            cat "MEEEEOOOOOOOW"
+            with hpunch
+            "I run for my life"
+            "I get to my garden, wondering if I died"
+            jacob "What the...?"
+            "In front of me there are a dog medal on the grass"
+            "It has a note"
+            "\"For the dog hero!\""
+            "*Sigh*"
+            "I get the medal and return to Marcos' bedroom"
+            $ inventory.append("dog medal")
+            show screen notify(message="Dog medal added to inventory")
 
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
