@@ -11,6 +11,9 @@ label lara:
     scene bg lara bedroom
     with dissolve
 
+    if "bracelet" not in inventory:
+        show screen lara_clue_smart_bracelet
+
     show lara normal
     with dissolve
 
@@ -27,9 +30,7 @@ label lara_dialogue_menu:
         "\"[basic_dialogue_last_night_notice_something!t]\"":
             jacob "[basic_dialogue_last_night_notice_something!t]"
             lara "..."
-            lara "At about 22:30 I saw the light turning on in Hannah's room"
-            "mmm..."
-            $ lara_saw_hannah = True
+            lara "Not that I can remember now"
             jump lara_dialogue_menu
 
         "[basic_dialogue_throw_ball!t]":
@@ -50,6 +51,7 @@ label lara_dialogue_menu:
 
         "[basic_dialogue_search_clues!t]":
             "Let's see what I find"
+            $ on_clues_screen = True
             jump lara_clues
 
         "\"Can I borrow your smart bracelet?\"" if lara_clue_smart_bracelet_seen and not lara_clue_smart_bracelet_investigated:
@@ -157,7 +159,7 @@ label lara_dialogue_menu:
             lara "No..."
             lara "She ignored me and walked back to her room"
             "Mmm..."
-            # TODO: Unlock conversation"
+            $ lara_saw_hannah = True
             jacob "According to this you came back to the garden"
             lara "Sure, I resumed my training"
             jacob "What that training consisted of"
@@ -181,6 +183,7 @@ label lara_dialogue_menu:
                     lara "Told you!"
                     lara "You better burry that again!"
                     jacob "Yes madam!"
+                    "I burry the bone and return to Lara's room"
                     $ lara_garden_investigated = True
                 "No":
                     "I decide to trust her"
@@ -193,6 +196,10 @@ label lara_dialogue_menu:
 
     label test_end:
         $ lara_clue_smart_bracelet_investigated = True
+
+        hide screen bracelet
+        $ inventory.append("bracelet")
+        show screen notify(message="Smart bracelet added to inventory")
 
         pause 1.0
         "Ok, so it's time to check the bracelet"
@@ -207,10 +214,11 @@ label lara_dialogue_menu:
 
 screen lara_clue_smart_bracelet():
     imagebutton:
-        idle "images/object cookies jar.png"
-        xpos 100
-        ypos 100
-        if not seeing_clue:
+        idle "images/object bracelet idle.png"
+        hover "images/object bracelet hover.png"
+        xpos 900
+        ypos 550
+        if on_clues_screen and not seeing_clue:
             action Jump("lara_clue_smart_bracelet_click")
 
 label lara_clue_smart_bracelet_click:
@@ -226,7 +234,6 @@ label lara_clue_smart_bracelet_click:
 
 label lara_clues:
     show screen notify(message="Search possible clues and click on them to interact")
-    show screen lara_clue_smart_bracelet
     call screen clues_back_screen
 
     hide screen lara_clue_smart_bracelet
