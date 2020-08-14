@@ -11,6 +11,9 @@ label marcos:
     scene bg marcos bedroom
     with dissolve
 
+    show screen marcos_clue_computer
+    show screen marcos_clue_golosines
+
     show marcos normal
     with dissolve
 
@@ -308,10 +311,11 @@ label check_marcos_computer:
 screen marcos_clue_computer():
     # Source: <https://lemmasoft.renai.us/forums/viewtopic.php?t=19168>
     imagebutton:
-        idle "images/object cookies jar.png"
-        xpos 100
-        ypos 100
-        if not seeing_clue:
+        idle "images/object computer idle.png"
+        hover "images/object computer hover.png"
+        xpos 50
+        ypos 350
+        if on_clues_screen and not seeing_clue:
             action Jump("marcos_clue_computer_click")
 
 label marcos_clue_computer_click:
@@ -329,10 +333,11 @@ label marcos_clue_computer_click:
 screen marcos_clue_golosines():
     # Source: <https://lemmasoft.renai.us/forums/viewtopic.php?t=19168>
     imagebutton:
-        idle "images/object cookies jar.png"
-        xpos 400
-        ypos 100
-        if not seeing_clue:
+        idle "images/object cookies idle.png"
+        hover "images/object cookies hover.png"
+        xpos 900
+        ypos 400
+        if on_clues_screen and not seeing_clue:
             action Jump("marcos_clue_golosines_click")
 
 label marcos_clue_golosines_click:
@@ -349,8 +354,8 @@ label marcos_clue_golosines_click:
 
 label marcos_clues:
     show screen notify(message="Search possible clues and click on them to interact")
-    show screen marcos_clue_computer
-    show screen marcos_clue_golosines
+    $ on_clues_screen = True
+
     call screen clues_back_screen
 
     hide screen marcos_clue_computer
