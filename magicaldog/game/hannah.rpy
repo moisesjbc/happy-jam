@@ -1,7 +1,10 @@
 init:
     default hannah_clue_record_seen = False
     default hannah_clue_photos_seen = False
+    default hannah_clue_record_investigated = False
     default hannah_clue_radio_seen = False
+    default hannah_ending = None
+    default hannah_requires_dog_medal = False
 
 label hannah:
     $ current_dog = "Hannah"
@@ -19,14 +22,12 @@ label hannah_dialogue_menu:
         "\"[basic_dialogue_last_night_excuse!t]\"":
             jacob "[basic_dialogue_last_night_excuse!t]"
             hannah "It was bed time, sir, so obviously I was here"
-            jump hannah_dialogue_menu
 
         "\"[basic_dialogue_last_night_notice_something!t]\"":
             jacob "[basic_dialogue_last_night_notice_something!t]"
             hannah "In fact I did, sir"
             hannah "I saw Lara burrying something in the garden"
             "Mmm..."
-            jump hannah_dialogue_menu
 
         "[basic_dialogue_throw_ball!t]":
             "Suddenly I throw a toy ball to [current_dog]"
@@ -36,23 +37,99 @@ label hannah_dialogue_menu:
             hannah "For a dog, at least!"
             jacob "Sorry"
             "Maybe [current_dog] is not the one with magical powers?"
-            jump hannah_dialogue_menu
 
         "\"[basic_dialogue_woof!t]\"":
             jacob "[basic_dialogue_woof!t]"
             hannah "Lalilulelo"
             jacob "What?"
             hannah "Nothing"
-            jump hannah_dialogue_menu
 
         "[basic_dialogue_search_clues!t]":
             "Let's see what I find"
             jump hannah_clues
 
-        "\"Can I check your security system?\"" if hannah_clue_record_seen:
+        "\"Can I check your security system?\"" if hannah_clue_record_seen and not hannah_clue_record_investigated:
             jacob "\"Can I check your security system?\""
-            hannah "Nope"
-            jump hannah_dialogue_menu
+            hannah "I am afraid not, sir!"
+            jacob "What?"
+            jacob "I thought that I was your superior"
+            hannah "And you are, sir!"
+            hannah "But this security system is personal"
+            hannah "And according to law 1/359880/32 from the dog's code"
+            hannah "A soldier can refuse to give a personal belonging to its superior (*)"
+            hannah "(*) Except if the superior is a dog hero"
+            jacob "I see"
+            "I could search the law on Internet and see what it takes to be a \"dog hero\""
+            "But the only computer with Internet access in the house belongs to Marcos"
+            $ hannah_about_being_dog_hero = True
+            "Or I just could scream \"A cat!\""
+            "That would drive her crazy and set a distraction"
+            "...but she may never forgive me"
+            pause 1.0
+            "What should I do?"
+
+            menu:
+                "\"Ok, never mind\"" if "dog medal" not in inventory:
+                    jacob "Ok, never mind"
+
+                "Show her the medal" if "dog medal" in inventory:
+                    $ hannah_ending = True
+                    "I show Hannah my dog medal"
+                    "She inmediatly raises herself showing respect"
+                    hannah "I didn't now, sir!"
+                    hannah "Please, check my security system as you wish!"
+                    jump investigate_hannah_record
+
+                "\"Look! A cat!\"":
+                    $ hannah_ending = False
+                    jacob "\"Look! A cat!\""
+                    with hpunch
+                    hannah "WHERE!"
+                    "Hannah runs frenetically though the room, jumping and crying"
+                    hannah "Where is it?!"
+                    hannah "I need backup!"
+                    hannah "Fire in the hole!"
+                    hannah "grrrr"
+                    "Ok, I got some time"
+                    jump investigate_hannah_record
+
+        "Talk with her about the security system log" if hannah_clue_record_investigated:
+            jacob "According to the log on the secutiry system..."
+            hannah "Yes, sir?"
+            jacob "Someone came by and you left the room with he or she"
+            hannah "Impossible!"
+            "Hannah checks the logs from the secutiry system"
+            "She looks surprise"
+            hannah "This cannot be!"
+            jacob "What do you mean?"
+            jacob "Don't you left the room last night?"
+            hannah "No, sir!"
+            hannah "Something must be wrong with the system"
+            hannah "I spent all the night here, as always!"
+            if $ lara_saw_hannah:
+                jacob "But Hannah also saw you last night"
+                jacob "Leaving my room"
+                hannah "What...?"
+                hannah "..."
+                hannah "I trust Lara. She's a good soldier"
+                hannah "If she saw me, then..."
+                pause 1.0
+                hannah "Maybe I am a sleepwalker?"
+                jacob "And a sleepmagician?..."
+                hannah "What?"
+                jacob "Nothing!"
+                hannah "What the cameras on your room show, sir?"
+                jacob "They..."
+                "I don't want to mention the floating golden sandwich. Just in case"
+                jacob "It's strange"
+                jacob "They don't show you in my room"
+                hannah "That's strange, sir"
+                hannah "Maybe we have been hacked"
+                hannah "Your cameras... my system..."
+                "..."
+                jacob "I'll investigate that"
+                hannah "Me too, sir"
+            $ hannah_clue_record_investigated = True
 
         "\"Why do you have photos of my golden sandwich?!\"" if hannah_clue_photos_seen:
             jacob "Why do you have photos of my golden sandwich?!"
@@ -78,23 +155,46 @@ label hannah_dialogue_menu:
             jacob "Sorry..."
             jacob "I believe you"
             "... or do I?"
-            jump hannah_dialogue_menu
 
-        "\"What is the radio for?\"" if hannah_clue_photos_seen:
+        "\"What is the radio for?\"" if hannah_clue_radio_seen:
             jacob "What is the radio for?"
             hannah "It's for notifying all the dogs in the neighborhour"
             hannah "In case of a cat attack"
             jacob "..."
             jacob "The war ended years ago"
             hannah "A soldier must be always prepared, sir"
+            jacob "Yeah, but do you have to have like..."
+            jacob "...a milion of them?"
+            hannah "Yes!"
             jump hannah_dialogue_menu
+
+        "\"Can I take one of your microphones?\"" if hannah_clue_radio_seen and marcos_requires_microphone:
+            jacob "\"Can I take one of your microphones?\""
+            hannah "..."
+            hannah "...."
+            hannah "....."
+            jacob "You have A LOT of them"
+            hannah "Ok, ok"
+            hannah "Here, sir!"
+            $ inventory.append("microphone")
+            show screen notify(message="Microphone added to then inventory")
+            jacob "Thanks!"
 
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             hannah "Bye sir!"
             jump dog_selector_menu
 
-    jump dog_selector_menu
+    jump hannah_dialogue_menu
+
+label investigate_hannah_record:
+    "I check Hannah's security system"
+    "What the...?"
+    "According to the system, someone entered this room at 22:00"
+    "Then two dogs left the room"
+    "Later, Hannah entered again, alone"
+    "..."
+    jump hannah_dialogue_menu
 
 
 # CLUE - Security system
@@ -153,7 +253,7 @@ screen hannah_clue_radio():
 
 label hannah_clue_radio_click:
     $ seeing_clue = True
-    $ hannah_clue_photos_seen = True
+    $ hannah_clue_radio_seen = True
     "A radio?..."
     "...why?"
     $ seeing_clue = False

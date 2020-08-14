@@ -3,6 +3,7 @@ init:
     default lara_clue_smart_bracelet_investigated = False
     default lara_garden_investigated = False
     default lara_ending = None
+    default lara_saw_hannah = False
 
 label lara:
     $ current_dog = "Lara"
@@ -28,6 +29,7 @@ label lara_dialogue_menu:
             lara "..."
             lara "At about 22:30 I saw the light turning on in Hannah's room"
             "mmm..."
+            $ lara_saw_hannah = True
             jump lara_dialogue_menu
 
         "[basic_dialogue_throw_ball!t]":

@@ -1,11 +1,12 @@
 init:
     default first_time = True
-    default marcos_clue_computer_seen = False
+    default marcos_clue_computer_status = None
     default marcos_clue_golosines_seen = False
+    default marcos_requires_microphone = False
+    default marcos_has_new_microphone = False
+    default marcos_ending = None
 
 label marcos:
-    $ current_dog = "Marcos"
-
     scene bg marcos bedroom
     with dissolve
 
@@ -78,7 +79,7 @@ label marcos_dialogue_menu:
             jump marcos_dialogue_menu
 
         "[basic_dialogue_throw_ball!t]":
-            "Suddenly I throw a toy ball to [current_dog]"
+            "Suddenly I throw a toy ball to Marcos"
             "Marcos jumps and bites the ball in the air"
             marcos "mfkdsamfksdafmlksdamfks"
             marcos "GRRRRRRRRRRRR"
@@ -103,7 +104,7 @@ label marcos_dialogue_menu:
             "Let's see what I find"
             jump marcos_clues
 
-        "\"Can I check your computer?\"" if marcos_clue_computer_seen:
+        "\"Can I check your computer?\"" if marcos_clue_computer_status == "seen":
             jacob "\"Can I check your computer?\""
             marcos "No way"
             jacob "Why?"
@@ -134,8 +135,50 @@ label marcos_dialogue_menu:
             marcos "Oh"
             marcos "So there it is"
             marcos "Get me a microphone and you would have proven youself worthy"
-            "Where could I get a microphone?"
-            jump marcos_dialogue_menu
+            $ marcos_requires_microphone = True
+
+            if "microphone" in inventory:
+                "I could give him the microphone"
+            else:
+                "I could look for a microphone for him"
+                "Where could I found one?"
+
+            "Or I could simply threaten him to report his channel with any made up excuse"
+            "YouDog! is an strict platform and would close his channel while they investigate it"
+            "It would ruin his reputation temporary, though"
+            "And he might never forgive me"
+
+            "What should I do?"
+
+            menu:
+                "\"Ok, I'll look for that microphone\"" if "microphone" not in inventory:
+                    jacob "\"Ok, I'll look for that microphone\""
+                    marcos "Perfect!"
+
+                "Give microphone to Marcos" if "microphone" in inventory:
+                    "I give the microphone to Marcos"
+                    $ inventory = filter(lambda x: x != "microphone", inventory)
+                    show screen notify(message="Microphone removed from inventory")
+                    marcos "Oh!"
+                    marcos "Thank you so much, bro!"
+                    marcos "You really want to help me with the channel!"
+                    jacob "Sure"
+                    marcos "Thanks!"
+                    $ marcos_ending = True
+                    jump check_marcos_computer
+
+                "Threaten him to report his channel on YouDog!":
+                    jacob "You know..."
+                    jacob "If you don't allow me your computer"
+                    jacob "I could report your YouDog! channel"
+                    marcos "!"
+                    marcos "You wouldn't dare!"
+                    jacob "I don't know..."
+                    jacob "You wanna bet?"
+                    marcos "You..."
+                    marcos "Ok, check it!"
+                    $ marcos_ending = False
+                    jump check_marcos_computer
 
         "\"Where did you got those golosines?\"" if marcos_clue_golosines_seen:
             jacob "Where did you got those golosines?"
@@ -148,14 +191,64 @@ label marcos_dialogue_menu:
             marcos "I think that they are not safe for humans"
             marcos "But sure!"
             $ inventory.append("golosines")
-            show screen notify(message="Golosines added to inventory")
+            show screen notify(message="Golosines added to the inventory")
             jump marcos_dialogue_menu
+
+        "Ask for the gap in its work last night" if marcos_clue_computer_status == "investigated":
+            jacob "I checked your computer and..."
+            marcos "Yes...?"
+            jacob "There is a gap"
+            jacob "You stopped working at 20:00"
+            marcos "Oh yes"
+            marcos "I had some rest"
+            jacob "Oh"
+            "Suspecting..."
+            "But I can't prove that he is lying"
+
+        "Ask for the \"The Magical Dog\" tab" if marcos_clue_computer_status == "investigated":
+            jacob "I checked your computer and..."
+            marcos "Yes...?"
+            jacob "Out of curiosity"
+            jacob "What is this page about?"
+            jacob "\"The Magical Dog\""
+            marcos "!"
+            marcos "That's nothing"
+            marcos "It's..."
+            marcos "It's a tutorial for improving your SEO on YouDog!"
+            marcos "I know, I know"
+            marcos "That name is not very descriptive"
+            marcos "Click bait!"
+            jacob "Mmmm"
+            jacob "Can I check it?"
+            jacob "It has a captcha for dogs"
+            marcos "..."
+            marcos "No, sorry"
+            marcos "I can't let you learn my secrets!"
+            "Marcos laughes nervously"
+            jacob "I see"
+            "Mmm..."
 
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             marcos "Bye!"
             jump dog_selector_menu
 
+    jump marcos_dialogue_menu
+
+
+label check_marcos_computer:
+    $ marcos_clue_computer_status = "investigated"
+    "I check Marcos' computer"
+    "Mmm... there's a gap here!"
+    "He stopped working on his new video at about 22:00!"
+    "There is something else..."
+    "There is a tab opened"
+    "Called \"The magical dog!\""
+    "I click on it"
+    "Theres a captcha for dogs"
+    "\"Which of these are dog asses\""
+    "All I see are 9 black images"
+    "*Sigh*"
     jump marcos_dialogue_menu
 
 
@@ -173,7 +266,7 @@ screen marcos_clue_computer():
 
 label marcos_clue_computer_click:
     $ seeing_clue = True
-    $ marcos_clue_computer_seen = True
+    $ marcos_clue_computer_status = "seen"
     "Marcos is all the time on his computer"
     "Maybe I can check his history for yesterday at night"
     $ seeing_clue = False

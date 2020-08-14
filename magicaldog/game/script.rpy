@@ -19,7 +19,7 @@ init:
 
 label start:
     # TODO: Remove
-    jump lara
+    jump marcos
 
     show bg intro
     "Hi!"
@@ -88,7 +88,7 @@ label dog_selector_menu:
             jump marcos
         "Lara, Du'uh":
             jump lara
-        "In fact, I think that I reached a verdict!" if lara_ending:
+        "In fact, I think that I reached a verdict!" if hannah_ending != None and marcos_ending != None and lara_ending != None:
             jump ending
 
 screen clues_back_screen():
