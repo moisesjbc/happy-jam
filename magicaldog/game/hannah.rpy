@@ -238,9 +238,10 @@ label hannah_clue_record_click:
 
 screen hannah_clue_photos():
     imagebutton:
-        idle "images/object cookies jar.png"
-        xpos 400
-        ypos 200
+        idle "images/object photos idle.png"
+        hover "images/object photos hover.png"
+        xpos 750
+        ypos 350
         if on_clues_screen and not seeing_clue:
             action Jump("hannah_clue_photos_click")
 
