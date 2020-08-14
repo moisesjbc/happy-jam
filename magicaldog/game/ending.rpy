@@ -19,7 +19,7 @@ label ending:
     show lara normal at right
     with dissolve
 
-    jacob "I have call all of you"
+    jacob "I have called all of you"
     jacob "Because something bad happened"
     jacob "My golden sandwich was stolen!"
     "I expected at least some emotion on their faces"
