@@ -21,10 +21,7 @@ init:
     default inventory = []
 
 label start:
-    # TODO: Remove
-    jump lara
-
-    show bg intro
+    show bg living room
     "Hi!"
     "My name is Jacob. I'm 20"
     "A year ago I won a world record eating the highest number of sandwiches in my garage"
@@ -65,7 +62,9 @@ label start:
     "But yesterday in the night hapenned something..."
     "I checked the camera on my room and..."
 
-    show bg bedroom
+label steal:
+    scene bg camera
+    show overlay camera zorder 100
     show object golden sandwich:
         xpos 900
         ypos 200
@@ -80,7 +79,7 @@ label start:
     "I am going to discover the guilty, no matter what!"
 
 label dog_selector_menu:
-    scene bg intro
+    scene bg living room
 
     "Who should I question now?"
 

@@ -284,6 +284,8 @@ label marcos_dialogue_menu:
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             marcos "Bye!"
+            hide screen marcos_clue_computer
+            hide screen marcos_clue_golosines
             jump dog_selector_menu
 
     jump marcos_dialogue_menu
@@ -357,9 +359,6 @@ label marcos_clues:
     $ on_clues_screen = True
 
     call screen clues_back_screen
-
-    hide screen marcos_clue_computer
-    hide screen marcos_clue_golosines
 
     "Enough for now"
     jump marcos_dialogue_menu

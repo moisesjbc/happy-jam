@@ -192,6 +192,7 @@ label lara_dialogue_menu:
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
             lara "Bye bye!"
+            hide screen lara_clue_smart_bracelet
             jump dog_selector_menu
 
     label test_end:
@@ -235,8 +236,6 @@ label lara_clue_smart_bracelet_click:
 label lara_clues:
     show screen notify(message="Search possible clues and click on them to interact")
     call screen clues_back_screen
-
-    hide screen lara_clue_smart_bracelet
 
     "Enough for now"
     jump lara_dialogue_menu
