@@ -3,6 +3,7 @@ define hannah = Character('Hannah', color="#ffc8c8")
 define marcos = Character('Marcos', color="#c8ffc8")
 define lara = Character('Lara', color="#c8c8ff")
 define cat = Character("Neighbour's cat", color="#aa0000")
+define robert = Character('Robert', color="#FF55FF")
 
 init:
     $ basic_dialogue_last_night_excuse = "Where were you last night at 10 PM?"
@@ -20,7 +21,7 @@ init:
 
 label start:
     # TODO: Remove
-    jump marcos
+    jump ending
 
     show bg intro
     "Hi!"
