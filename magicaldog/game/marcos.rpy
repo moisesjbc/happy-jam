@@ -173,7 +173,7 @@ label marcos_dialogue_menu:
                     marcos "You really want to help me with the channel!"
                     jacob "Sure"
                     marcos "Thanks!"
-                    $ marcos_ending = True
+                    $ marcos_ending = "good"
                     jump check_marcos_computer
 
                 "Threaten him to report his channel on YouDog!":
@@ -186,7 +186,7 @@ label marcos_dialogue_menu:
                     jacob "You wanna bet?"
                     marcos "You..."
                     marcos "Ok, check it!"
-                    $ marcos_ending = False
+                    $ marcos_ending = "bad"
                     jump check_marcos_computer
 
         "\"Where did you get those cookies?\"" if marcos_clue_cookies_seen:

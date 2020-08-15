@@ -85,7 +85,7 @@ label hannah_dialogue_menu:
                     jacob "Ok, never mind"
 
                 "Show her the medal" if "dog medal" in inventory:
-                    $ hannah_ending = True
+                    $ hannah_ending = "good"
                     "I show Hannah my dog medal"
                     "She inmediatly raises herself showing respect"
                     hannah "I didn't now, sir!"
@@ -93,7 +93,7 @@ label hannah_dialogue_menu:
                     jump investigate_hannah_record
 
                 "\"Look! A cat!\"":
-                    $ hannah_ending = False
+                    $ hannah_ending = "bad"
                     jacob "\"Look! A cat!\""
                     with hpunch
                     hannah "WHERE!"

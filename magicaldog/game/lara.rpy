@@ -131,7 +131,7 @@ label lara_dialogue_menu:
                     lara "I hope that we could do excercise together more often!"
                     jacob "Sure!"
                     "I try hard not to let her see that I am crying in pain"
-                    $ lara_ending = "true"
+                    $ lara_ending = "good"
                     jump test_end
 
                 "\"Maybe later\"" if "cookies" not in inventory:
