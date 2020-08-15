@@ -75,8 +75,8 @@ label lara_dialogue_menu:
             "Thinking about it makes me tired"
             "Maybe I really should do excercise every now and then"
             "Although..."
-            "I could avoid doing excercise and instead offer her some dog golosines"
-            if "golosines" not in inventory:
+            "I could avoid doing excercise and instead offer her some dog cookies"
+            if "cookies" not in inventory:
                 "(I still need to find them, though)"
             "But she would never forgive me..."
 
@@ -129,17 +129,17 @@ label lara_dialogue_menu:
                     $ lara_ending = "true"
                     jump test_end
 
-                "\"Maybe later\"" if "golosines" not in inventory:
+                "\"Maybe later\"" if "cookies" not in inventory:
                     lara "..."
                     lara "Ok"
                     jump lara_dialogue_menu
 
-                "Buy her with golosines" if "golosines" in inventory:
+                "Buy her with cookies" if "cookies" in inventory:
                     jacob "Oh, what is this?"
-                    "I take the golosines out of my pocket"
+                    "I take the cookies out of my pocket"
                     lara "Please no!"
                     with hpunch
-                    "Lara jumps like a lightning and takes the golosines from my hands"
+                    "Lara jumps like a lightning and takes the cookies from my hands"
                     lara "I hate you!"
                     lara "grrgffgfdsg"
                     lara "Take it!"

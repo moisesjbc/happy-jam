@@ -1,7 +1,7 @@
 init:
     default first_time = True
     default marcos_clue_computer_status = None
-    default marcos_clue_golosines_seen = False
+    default marcos_clue_cookies_seen = False
     default marcos_requires_microphone = False
     default marcos_has_new_microphone = False
     default marcos_ending = None
@@ -12,7 +12,7 @@ label marcos:
     with dissolve
 
     show screen marcos_clue_computer
-    show screen marcos_clue_golosines
+    show screen marcos_clue_cookies
 
     show marcos normal
     with dissolve
@@ -185,18 +185,18 @@ label marcos_dialogue_menu:
                     $ marcos_ending = False
                     jump check_marcos_computer
 
-        "\"Where did you got those golosines?\"" if marcos_clue_golosines_seen:
-            jacob "Where did you got those golosines?"
+        "\"Where did you got those cookies?\"" if marcos_clue_cookies_seen:
+            jacob "Where did you got those cookies?"
             marcos "From my subscriptors!"
             marcos "They are awesome!"
             jump marcos_dialogue_menu
 
-        "\"Can I get some golosines?\"" if marcos_clue_golosines_seen:
-            jacob "Can I get some golosines?"
+        "\"Can I get some cookies?\"" if marcos_clue_cookies_seen:
+            jacob "Can I get some cookies?"
             marcos "I think that they are not safe for humans"
             marcos "But sure!"
-            $ inventory.append("golosines")
-            show screen notify(message="Golosines added to the inventory")
+            $ inventory.append("cookies")
+            show screen notify(message="Cookies added to the inventory")
             jump marcos_dialogue_menu
 
         "Ask for the gap in its work last night" if marcos_clue_computer_status == "investigated":
@@ -286,7 +286,7 @@ label marcos_dialogue_menu:
             jacob "[basic_dialogue_exit!t]"
             marcos "Bye!"
             hide screen marcos_clue_computer
-            hide screen marcos_clue_golosines
+            hide screen marcos_clue_cookies
             jump dog_selector_menu
 
     jump marcos_dialogue_menu
@@ -330,10 +330,10 @@ label marcos_clue_computer_click:
     jump marcos_clues
 
 
-# CLUE - Golosines
+# CLUE - Cookies
 ###############################################################################
 
-screen marcos_clue_golosines():
+screen marcos_clue_cookies():
     # Source: <https://lemmasoft.renai.us/forums/viewtopic.php?t=19168>
     imagebutton:
         idle "images/object cookies idle.png"
@@ -341,12 +341,12 @@ screen marcos_clue_golosines():
         xpos 900
         ypos 400
         if on_clues_screen and not seeing_clue:
-            action Jump("marcos_clue_golosines_click")
+            action Jump("marcos_clue_cookies_click")
 
-label marcos_clue_golosines_click:
+label marcos_clue_cookies_click:
     $ seeing_clue = True
-    $ marcos_clue_golosines_seen = True
-    "Golosines?"
+    $ marcos_clue_cookies_seen = True
+    "Cookies?"
     "I didn't buy those..."
     $ seeing_clue = False
     jump marcos_clues
