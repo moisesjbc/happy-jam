@@ -22,9 +22,6 @@ init:
     default inventory = []
 
 label start:
-    # TODO: Remove
-    #jump ending
-
     show bg living room
     "Hi!"
     "My name is Jacob. I'm 20"

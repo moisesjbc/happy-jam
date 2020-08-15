@@ -119,7 +119,6 @@ label lara_dialogue_menu:
                     lara "Perfect!"
                     lara "Here"
                     lara "Take it"
-                    # TODO: Remove smart bracelet from screen
                     jacob "Thanks"
                     lara "And Jacob"
                     jacob "Yes"

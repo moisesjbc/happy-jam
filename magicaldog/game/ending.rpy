@@ -1,10 +1,5 @@
 
 label ending:
-    # TODO: Remove
-    $ hannah_ending = "good"
-    $ lara_ending = "good"
-    $ marcos_ending = "good"
-
     "So the moment has come"
     "I ask them all to come to the living room"
     scene bg living room
@@ -47,7 +42,6 @@ label ending:
     "I am about to say it"
     "But then..."
 
-    # TODO: Add animation
     show robert normal
     with dissolve
 
