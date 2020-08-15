@@ -23,7 +23,7 @@ init:
 
 label start:
     # TODO: Remove
-    jump ending
+    #jump ending
 
     show bg living room
     "Hi!"

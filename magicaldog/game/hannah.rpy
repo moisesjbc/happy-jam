@@ -175,7 +175,7 @@ label hannah_dialogue_menu:
             hannah "Yes!"
             jump hannah_dialogue_menu
 
-        "\"Can I take one of your microphones?\"" if hannah_clue_radio_seen and marcos_requires_microphone:
+        "\"Can I take one of your microphones?\"" if hannah_clue_radio_seen and marcos_requires_microphone and "microphone" not in inventory:
             jacob "\"Can I take one of your microphones?\""
             hannah "..."
             hannah "...."
