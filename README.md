@@ -17,4 +17,4 @@ Idea, programming and graphics by Moisés J. Bonilla Caraballo ([web](https://ww
 ### Software used
 
 - [Ren'Py](https://www.renpy.org/)
-- [Gimp](http://www.gimp.org.es/)
+- [Gimp](http://www.gimp.org/)
