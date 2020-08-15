@@ -1,10 +1,10 @@
+# Characters
 define jacob = Character('Jacob', color="#ffffff")
 define hannah = Character('Hannah', color="#ffc8c8")
 define marcos = Character('Marcos', color="#c8ffc8")
 define lara = Character('Lara', color="#c8c8ff")
 define cat = Character("Neighbour's cat", color="#aa0000")
 define robert = Character('Robert', color="#FF55FF")
-default on_clues_screen = False
 
 # Basic dialogues
 define basic_dialogue_last_night_excuse = "Where were you last night at 10 PM?"
@@ -18,6 +18,10 @@ init:
     # Flag set to true while the player is viewing a clue, so clue buttons
     # are disabled while doing it.
     default seeing_clue = False
+
+    # Flag set to true while the player is investigating for clues. Used for
+    # enabling or disabling imagebuttons representing clues.
+    default on_clues_screen = False
 
     default inventory = []
 
@@ -33,14 +37,17 @@ label start:
     show hannah normal at left
     with dissolve
     "Hannah..."
+
     show marcos normal
     with dissolve
     "Marcos..."
+
     show lara normal at right
     with dissolve
     "...and Lara"
 
     "A few days ago I went into the kitchen and discovered something"
+
     # Cookies jar animation
     show bg kitchen
     show object cookies jar:
@@ -60,7 +67,7 @@ label start:
     "But it's cool for me!"
     "They are good dogs and I respect their privacy"
     "..."
-    "But yesterday in the night hapenned something..."
+    "But yesterday in the night hapenned something bad..."
     "I checked the camera on my room and..."
 
 label steal:
@@ -71,6 +78,7 @@ label steal:
         ypos 200
         linear 3.0 xpos -400 ypos 200
     pause 3.0
+
     "My golden sandwich was stolen using magic!"
     "The prize for my heroism!"
     "My most precious possesion!"
