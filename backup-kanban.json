@@ -6,72 +6,17 @@
       "name": "ToDo",
       "cards": [
         {
-          "name": "Textos y placeholders - Intro",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - menú",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Conversación básica - Hannah",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Buscar pistas - Hannah",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Conversación básica - Marcos",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Buscar pistas - Marcos",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Conversación básica - Lara",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Buscar pistas - Lara",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "[Split] Terminar pruebas",
+          "name": "[Split] Sprites final",
           "details": "",
           "color": "FCC7FC"
         },
         {
-          "name": "Textos y placeholders - Final 1/2",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Final 2/2 - Final bueno",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "Textos y placeholders - Final 2/2 - Final malo",
-          "details": "",
-          "color": "FAFCD2"
-        },
-        {
-          "name": "[Split] Segundo hito: Desarrollar primera mitad (DEFINIR)",
+          "name": "[Split] Desarrollar segunda mitad (DEFINIR)",
           "details": "",
           "color": "FCE4D4"
         },
         {
-          "name": "[Split] Desarrollar segunda mitad (DEFINIR)",
+          "name": "[Split] Música y sonidos",
           "details": "",
           "color": "FCC7FC"
         },
@@ -81,9 +26,59 @@
           "color": "FCC7FC"
         },
         {
+          "name": "¿Todas las variables con default? Probar save / load",
+          "details": "",
+          "color": "C1F7C2"
+        },
+        {
+          "name": "Eliminar current_dog",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir inventario",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Cambiar \"golosines\" por \"cookies\"",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Evitar rama de obtener la dog medal si ya se tiene",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Fondo menú",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "¿Usar scene en cada habitación separada y quitar \"hide screen\"?",
+          "details": "",
+          "color": "C1F7C2"
+        },
+        {
+          "name": "Quitar TODOs",
+          "details": "",
+          "color": "C1F7C2"
+        },
+        {
+          "name": "Cambiar nombre REPO",
+          "details": "",
+          "color": "C1F7C2"
+        },
+        {
           "name": "Añadir README",
           "details": "",
           "color": "C1F7C2"
+        },
+        {
+          "name": "Entregar",
+          "details": "",
+          "color": "FFB5B5"
         }
       ],
       "settings": {}
@@ -92,7 +87,7 @@
       "name": "On going",
       "cards": [
         {
-          "name": "Inicializar proyecto Renpy",
+          "name": "Añadir sprite de Robert",
           "details": "",
           "color": "FAFCD2"
         }
@@ -104,6 +99,161 @@
     {
       "name": "Done",
       "cards": [
+        {
+          "name": "Añadir animación y sprite del \"Golden sandwich\"",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir animación galletas volando en cocina",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de pulsera inteligente (idle y hover)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de pesas",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de habitación de Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de golosinas de Marcos (idle y hover)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de ordenador de Marcos (idle y hover)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de habitación de Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de habitación de Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de radio (iddle y hover)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de photos (iddle y hover)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de sistema de seguridad (iddle y hover)",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Añadir sprite de Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "[Split] Segundo hito: Desarrollar primera mitad (juego \"casi\" completo con textos y placeholders)",
+          "details": "",
+          "color": "FCE4D4"
+        },
+        {
+          "name": "Textos y placeholders - Final 2/2 - Final malo",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Final 2/2 - Final bueno",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Final 1/2",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Prueba de Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Prueba de Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Prueba de Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Buscar pistas - Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Conversación básica - Lara",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Buscar pistas - Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Conversación básica - Marcos",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Buscar pistas - Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Conversación básica - Hannah",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - menú",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Textos y placeholders - Intro",
+          "details": "",
+          "color": "FAFCD2"
+        },
+        {
+          "name": "Inicializar proyecto Renpy",
+          "details": "",
+          "color": "FAFCD2"
+        },
         {
           "name": "[Split] Primer hito: esbozar personajes e historia",
           "details": "",
