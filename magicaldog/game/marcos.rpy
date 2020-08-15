@@ -259,9 +259,17 @@ label marcos_dialogue_menu:
                     pass
                 "Of course!":
                     pass
+            hide screen marcos_clue_computer
+            hide screen marcos_clue_cookies
+            scene bg neighbour garden jacob
             "I go to the neighbour's garden"
-            "I spot the neighbour's cat there"
-            "I come close, like a ninja"
+            "looking for my victim"
+            "like a ninja..."
+            jacob "Wait, where is he?"
+            show bg neighbour garden cat
+            with dissolve
+            pause 1.0
+            jacob "F"
             cat "MEEEEEOOOOOW"
             with hpunch
             "Oh my"
@@ -285,6 +293,11 @@ label marcos_dialogue_menu:
             "I get the medal and return to Marcos' bedroom"
             $ inventory.append("dog medal")
             show screen notify(message="Dog medal added to inventory")
+            scene bg marcos bedroom
+            show marcos normal
+            with dissolve
+            show screen marcos_clue_computer
+            show screen marcos_clue_cookies
 
         "\"[basic_dialogue_exit!t]\"":
             jacob "[basic_dialogue_exit!t]"
