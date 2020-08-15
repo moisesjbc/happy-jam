@@ -7,8 +7,6 @@ init:
     default hannah_requires_dog_medal = False
 
 label hannah:
-    $ current_dog = "Hannah"
-
     show screen hannah_clue_record
     show screen hannah_clue_photos
     show screen hannah_clue_radio
@@ -34,13 +32,13 @@ label hannah_dialogue_menu:
             "Mmm..."
 
         "[basic_dialogue_throw_ball!t]":
-            "Suddenly I throw a toy ball to [current_dog]"
+            "Suddenly I throw a toy ball to Hannah"
             hannah "!"
             hannah "What is the meaning of this, sir!"
             hannah "This is highly innapropiate for a superior!"
             hannah "For a dog, at least!"
             jacob "Sorry"
-            "Maybe [current_dog] is not the one with magical powers?"
+            "Maybe Hannah is not the one with magical powers?"
 
         "\"[basic_dialogue_woof!t]\"":
             jacob "[basic_dialogue_woof!t]"

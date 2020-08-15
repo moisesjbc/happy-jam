@@ -95,6 +95,7 @@ label marcos_dialogue_menu:
             jacob "Oh"
             jacob "Thanks!"
             marcos "You're welcome"
+            "Maybe he is not the one?"
             jump marcos_dialogue_menu
 
         "\"[basic_dialogue_woof!t]\"":

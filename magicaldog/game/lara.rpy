@@ -6,8 +6,6 @@ init:
     default lara_saw_hannah = False
 
 label lara:
-    $ current_dog = "Lara"
-
     scene bg lara bedroom
     with dissolve
 
@@ -34,12 +32,13 @@ label lara_dialogue_menu:
             jump lara_dialogue_menu
 
         "[basic_dialogue_throw_ball!t]":
-            "Suddenly I throw a toy ball to [current_dog]"
+            "Suddenly I throw a toy ball to Kara"
             "Lara jumps and bites the ball in the air"
             "Then she smiles at me"
             lara "Awesome! Again!"
             jacob "Maybe later"
             lara "Oh"
+            "No magic here"
             jump lara_dialogue_menu
 
         "\"[basic_dialogue_woof!t]\"":
