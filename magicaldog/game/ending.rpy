@@ -95,6 +95,10 @@ label ending:
         hannah "It's a \"good woof\" from me!"
         "Hannah smiles at me"
         hannah "He went so far as to fight a cat and get a medal for the truth!"
+        hide hannah
+        with dissolve
+        show robert normal
+        with dissolve
         robert "Wow!"
         robert "Awesome!"
     else:
@@ -105,15 +109,19 @@ label ending:
         "Hannah looks back at Robert"
         hannah "He pretended that there was a cat in my room!"
         hannah "Even knowing that that would traumatize me!"
+        hide hannah
+        with dissolve
+        show robert normal
+        with dissolve
         robert "That's bad!"
         robert "That's really bad!"
-    hide hannah
-    with dissolve
     pause 1.0
 
     robert "Ok"
     robert "What about you..."
     robert "...Marcos?"
+    hide robert
+    with dissolve
     show marcos normal
     with dissolve
     if marcos_ending == "good":
@@ -121,6 +129,10 @@ label ending:
         "Marcos smiles at me"
         marcos "He gave me a new brand microphone!"
         marcos "Now I can keep given my YouDog! subscribers a top quality content and..."
+        hide marcos
+        with dissolve
+        show robert normal
+        with dissolve
         robert "Ok, ok, enough"
         "Robert smiles at Marcos"
         robert "That's sweet of him!"
@@ -131,17 +143,21 @@ label ending:
         marcos "It threatened me with reporting my YouDog! channel!"
         marcos "That could have mean the end for me!"
         marcos "And for my beloved subscribers, who are the best and..."
+        hide marcos
+        with dissolve
+        show robert normal
+        with dissolve
         robert "Ok, ok"
         pause 1.0
         robert "That's... not cool"
         "Robert looks at me"
-    hide marcos
-    with dissolve
     pause 1.0
 
     robert "And finally..."
     robert "What do you think..."
     robert "Lara?"
+    hide robert
+    with dissolve
     show lara normal
     with dissolve
     if lara_ending == "good":
@@ -149,6 +165,10 @@ label ending:
         "Lara smiles at me"
         lara "He never do any excersice since he won that damn golden sandwich!"
         lara "But he did it for retrieving my smart bracelet in a nice way!"
+        hide lara
+        with dissolve
+        show robert normal
+        with dissolve
         robert "Oh, that's cool!"
     else:
         lara "..."
@@ -160,12 +180,14 @@ label ending:
         lara "If I eat one I have to eat all of them!"
         lara "And then I forget about my training"
         lara "It was very difficult for me to get over my adiction!"
+        hide lara
+        with dissolve
+        show robert normal
+        with dissolve
         robert "Oh"
         robert "Now I understand"
         "Robert looks at me"
         robert "That was very mean of you, Jacob!"
-    hide lara
-    with dissolve
     pause 1.0
 
     $ good_endings = len(filter(lambda e: e == "good", [hannah_ending, marcos_ending, lara_ending]))
