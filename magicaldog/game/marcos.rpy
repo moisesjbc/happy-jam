@@ -233,7 +233,7 @@ label marcos_dialogue_menu:
             jacob "I see"
             "Mmm..."
 
-        "Check law 1/359880/32 on Internet" if marcos_clue_computer_status == "investigated" and hannah_requires_dog_medal:
+        "Check law 1/359880/32 on Internet" if marcos_clue_computer_status == "investigated" and hannah_requires_dog_medal and "dog medal" not in inventory:
             jacob "Can I search something on your computer?"
             marcos "Sure!"
             "I search for law 1/359880/32 on Internet"
