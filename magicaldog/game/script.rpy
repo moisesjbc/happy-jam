@@ -6,14 +6,15 @@ define cat = Character("Neighbour's cat", color="#aa0000")
 define robert = Character('Robert', color="#FF55FF")
 default on_clues_screen = False
 
-init:
-    $ basic_dialogue_last_night_excuse = "Where were you last night at 10 PM?"
-    $ basic_dialogue_last_night_notice_something = "Did you see or hear something strange last night at 10 PM?"
-    $ basic_dialogue_throw_ball = "Throw ball and see if something magic happens"
-    $ basic_dialogue_woof = "Mmmm... woof?"
-    $ basic_dialogue_search_clues = "Search for clues"
-    $ basic_dialogue_exit = "Bye"
+# Basic dialogues
+define basic_dialogue_last_night_excuse = "Where were you last night at 10 PM?"
+define basic_dialogue_last_night_notice_something = "Did you see or hear something strange last night at 10 PM?"
+define basic_dialogue_throw_ball = "Throw ball and see if something magic happens"
+define basic_dialogue_woof = "Mmmm... woof?"
+define basic_dialogue_search_clues = "Search for clues"
+define basic_dialogue_exit = "Bye"
 
+init:
     # Flag set to true while the player is viewing a clue, so clue buttons
     # are disabled while doing it.
     default seeing_clue = False

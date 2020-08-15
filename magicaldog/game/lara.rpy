@@ -5,6 +5,7 @@ init:
     default lara_ending = None
     default lara_saw_hannah = False
 
+
 label lara:
     scene bg lara bedroom
     with dissolve

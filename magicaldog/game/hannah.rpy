@@ -6,6 +6,7 @@ init:
     default hannah_ending = None
     default hannah_requires_dog_medal = False
 
+
 label hannah:
     show screen hannah_clue_record
     show screen hannah_clue_photos
