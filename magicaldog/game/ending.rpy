@@ -1,5 +1,9 @@
 
 label ending:
+    # Decide if it's a good or a bad ending!
+    $ good_endings = len(filter(lambda e: e == "good", [hannah_ending, marcos_ending, lara_ending]))
+    $ good_ending = good_endings > 1
+
     "So the moment has come"
     "I ask them all to come to the living room"
     scene bg living room
@@ -16,12 +20,14 @@ label ending:
 
     jacob "I have called all of you"
     jacob "Because something bad happened"
-    jacob "My golden sandwich was stolen!"
+    jacob "My golden sandwich was stolen last night!"
     "I expected at least some emotion on their faces"
     "But no one of them seems to care a bit"
     "..."
     jacob "I have been collecting evidences"
     jacob "And I think I have a guilty"
+    pause 1.0
+
     jacob "And the guilty is..."
 
     hide hannah
@@ -49,23 +55,26 @@ label ending:
     robert "Hi! My name is Robert!"
     robert "And welcome to my program \"The magical dog!\""
     "He proceeds to look directly to some invisible camera"
+
     robert "For those of you who doesn't know me"
     robert "I am a 30 years old dog!"
     robert "\"How is that?\" you might be wondering"
-    robert "Well, 25 years ago I ate 55 lemons and I got superpowers!"
+    robert "Well, 25 years ago I ate 55 lemons and I got magical powers!"
     robert "Since then, I travel through the world"
     robert "Sneaking in houses at checking the relation between humans and dogs!"
     robert "On this week's program"
     robert "I came to Jacob's house, as requested by one of his dogs, Marcos"
+
     "What?"
     if marcos_ending == "good":
         "Marcos smiles at me"
     else:
         "Marcos looks at me, serious"
+
     robert "Jacob leaves with his three dogs: Hannah, Marcos and Lara"
     robert "I came this house yesterday and set..."
     "Robert smiles at me"
-    robert "and set a trap!"
+    robert "a little trap!"
     robert "I \"stole\" the \"golden sandwich\" from Jacob, his most precious belonging!"
     robert "I made sure that it would look for the guilty among his dogs"
     robert "But how would he find the evidences?"
@@ -88,7 +97,7 @@ label ending:
     if hannah_ending == "good":
         hannah "It's a \"good woof\" from me!"
         "Hannah smiles at me"
-        hannah "He went so far as to fight a cat and get a medal for the truth!"
+        hannah "He went so far as to fight a cat and get a medal for me to trust him!"
         hide hannah
         with dissolve
         show robert normal
@@ -129,7 +138,7 @@ label ending:
         with dissolve
         robert "Ok, ok, enough"
         "Robert smiles at Marcos"
-        robert "That's sweet of him!"
+        robert "That's so sweet of him!"
     else:
         marcos "..."
         marcos "It's a \"bad woof\" from me!"
@@ -184,7 +193,6 @@ label ending:
         robert "That was very mean of you, Jacob!"
     pause 1.0
 
-    $ good_endings = len(filter(lambda e: e == "good", [hannah_ending, marcos_ending, lara_ending]))
     show robert normal
     with dissolve
     robert "Well, that's all"
@@ -193,7 +201,7 @@ label ending:
     robert "So..."
     pause 1.0
 
-    if good_endings > 1:
+    if good_ending:
         robert "You have proven yourself to be a good human!"
         robert "Congratulations!"
         robert "As a prize, you get to have your golden sandwich back!"
@@ -214,11 +222,11 @@ label ending:
     robert "\"The magical dog!\""
     robert "Bye!"
 
-    "Robert dissappears without saying anything else"
     hide robert
     with dissolve
+    "Robert dissappears without saying anything else"
 
-    if good_endings > 1:
+    if good_ending:
         "And I receive the approval and love of my beloved dogs!"
     else:
         "And I am left with three dogs that I treated bad!"
