@@ -54,7 +54,7 @@ label marcos_dialogue_menu:
         "\"[basic_dialogue_last_night_excuse!t]\"":
             jacob "[basic_dialogue_last_night_excuse!t]"
             marcos "Huh?"
-            marcos "I was preparing my special video for 1k subscriptors"
+            marcos "I was preparing my special video for 1k subscribers"
             jacob "Oh..."
             jacob "Congratulations!"
             marcos "Don't pretend that you are happy for me!"
@@ -187,7 +187,7 @@ label marcos_dialogue_menu:
 
         "\"Where did you got those cookies?\"" if marcos_clue_cookies_seen:
             jacob "Where did you got those cookies?"
-            marcos "From my subscriptors!"
+            marcos "From my subscribers!"
             marcos "They are awesome!"
             jump marcos_dialogue_menu
 
