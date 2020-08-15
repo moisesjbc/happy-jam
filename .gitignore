@@ -1,7 +1,8 @@
 
 # Ren'py - source: <https://gist.github.com/bitlink207/60a6474d5fbb1632afd9>
 
-*.rpy[bc]
+*.rpy[mbc]
+*.rpymc
 *.bak
 **/tmp/*
 **/log.txt
@@ -9,3 +10,4 @@
 **/errors.txt
 **/traceback.txt
 *-dists/*
+project.json
