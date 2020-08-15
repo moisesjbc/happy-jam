@@ -1,7 +1,11 @@
 init:
     default first_time = True
+
+    # Clues status
     default marcos_clue_computer_status = None
     default marcos_clue_cookies_seen = False
+
+    # Other flags
     default marcos_requires_microphone = False
     default marcos_has_new_microphone = False
     default marcos_ending = None
@@ -149,9 +153,9 @@ label marcos_dialogue_menu:
                 "Where could I found one?"
 
             "Or I could simply threaten him to report his channel with any made up excuse"
-            "YouDog! is an strict platform and would close his channel while they investigate it"
+            "YouDog! is a really strict platform and would close his channel while they investigate it"
             "It would ruin his reputation temporary, though"
-            "And he might never forgive me"
+            "And he may never forgive me"
 
             "What should I do?"
 
@@ -185,7 +189,7 @@ label marcos_dialogue_menu:
                     $ marcos_ending = False
                     jump check_marcos_computer
 
-        "\"Where did you got those cookies?\"" if marcos_clue_cookies_seen:
+        "\"Where did you get those cookies?\"" if marcos_clue_cookies_seen:
             jacob "Where did you got those cookies?"
             marcos "From my subscribers!"
             marcos "They are awesome!"

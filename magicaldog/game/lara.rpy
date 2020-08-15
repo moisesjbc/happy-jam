@@ -1,7 +1,12 @@
 init:
+    # Clues seen
     default lara_clue_smart_bracelet_seen = False
+
+    # Clues investigated
     default lara_clue_smart_bracelet_investigated = False
     default lara_garden_investigated = False
+
+    # Other flags
     default lara_ending = None
     default lara_saw_hannah = False
 
@@ -78,7 +83,8 @@ label lara_dialogue_menu:
             "I could avoid doing excercise and instead offer her some dog cookies"
             if "cookies" not in inventory:
                 "(I still need to find them, though)"
-            "But she would never forgive me..."
+            "But she had a really bad adiction to cookies in the past"
+            "And she may never forgive me..."
 
             "Would you do it?"
             menu:

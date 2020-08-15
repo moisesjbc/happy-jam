@@ -1,19 +1,24 @@
 init:
+    # Clues seen
     default hannah_clue_record_seen = False
     default hannah_clue_photos_seen = False
-    default hannah_clue_record_investigated = False
     default hannah_clue_radio_seen = False
+
+    # Clues investigated
+    default hannah_clue_record_investigated = False
+
+    # Other flags
     default hannah_ending = None
     default hannah_requires_dog_medal = False
 
 
 label hannah:
+    scene bg hannah bedroom
+    with dissolve
+
     show screen hannah_clue_record
     show screen hannah_clue_photos
     show screen hannah_clue_radio
-
-    scene bg hannah bedroom
-    with dissolve
 
     show hannah normal
     with dissolve
@@ -113,6 +118,7 @@ label hannah_dialogue_menu:
             hannah "No, sir!"
             hannah "Something must be wrong with the system"
             hannah "I spent all the night here, as always!"
+            "..."
 
         "Tell her that hannah saw her last night" if lara_saw_hannah:
             jacob "Hannah saw you last night..."
@@ -144,7 +150,7 @@ label hannah_dialogue_menu:
             jacob "Answer me!"
             hannah "You didn't know where that prize came from, do you?"
             jacob "What do you mean?"
-            hannah "(Angry) It was made by cat artisans!"
+            hannah "It was made by cat artisans!"
             jacob "But..."
             hannah "YOU KNOW that I fought those creatures in the Great War between dogs and cats"
             hannah "How could you?"
@@ -155,7 +161,7 @@ label hannah_dialogue_menu:
             jacob "My golden sandwich dissapeared"
             hannah "I have nothing to do with that!"
             hannah "I would NEVER steal from a superior"
-            hannah "Even if I hate that he hast such a despicable possesion"
+            hannah "Even if I hate that he has such a despicable possesion"
             jacob "But these photos..."
             hannah "*Sigh* I want dog artisans to build a replica of that thing"
             hannah "It was supposed to be a surprise..."
