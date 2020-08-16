@@ -26,6 +26,8 @@ init:
     default inventory = []
 
 label start:
+    play music "audio/music.ogg"
+
     show bg living room
     "Hi!"
     "My name is Jacob. I'm 20"
