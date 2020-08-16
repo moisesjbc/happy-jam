@@ -4,8 +4,8 @@ label ending:
     $ good_endings = len(filter(lambda e: e == "good", [hannah_ending, marcos_ending, lara_ending]))
     $ good_ending = good_endings > 1
 
-    "So the moment has come"
-    "I ask them all to come to the living room"
+    "So the moment has come."
+    "I ask them all to come to the living room."
     scene bg living room
     with dissolve
 
@@ -18,13 +18,13 @@ label ending:
     show lara normal at right
     with dissolve
 
-    jacob "I have called all of you"
-    jacob "Because something bad happened"
+    jacob "I have called all of you..."
+    jacob "...because something bad happened."
     jacob "My golden sandwich was stolen last night!"
-    "I expected at least some emotion on their faces"
-    "But no one of them seems to care a bit"
+    "I expected at least some emotion on their faces."
+    "But no one of them seems to care a bit."
     "..."
-    jacob "I have been collecting evidences"
+    jacob "I have been collecting evidences."
     jacob "And I think I have a guilty"
     pause 1.0
 
@@ -45,44 +45,44 @@ label ending:
         "\"Lara!\"":
             pass
 
-    "I am about to say it"
-    "But then..."
+    "I am about to say it..."
+    "...but then..."
 
     show robert normal
     with dissolve
 
     jacob "What the...?"
     robert "Hi! My name is Robert!"
-    robert "And welcome to my program \"The magical dog!\""
-    "He proceeds to look directly to some invisible camera"
+    robert "And welcome to my program \"The magical dog\"!"
+    "He proceeds to look directly to some invisible camera."
 
-    robert "For those of you who don't know me"
+    robert "For those of you who don't know me,"
     robert "I am a 30 years old dog!"
-    robert "\"How is that?\" you might be wondering"
+    robert "\"How is that?\" you might be wondering."
     robert "Well, 25 years ago I ate 55 lemons and I got magical powers!"
-    robert "Since then, I travel through the world"
+    robert "Since then, I travel through the world."
     robert "Sneaking in houses at checking the relation between humans and dogs!"
-    robert "On this week's program"
-    robert "I came to Jacob's house, as requested by one of his dogs, Marcos"
+    robert "On this week's program..."
+    robert "...I came to Jacob's house, as requested by one of his dogs, Marcos"
 
     "What?"
     if marcos_ending == "good":
-        "Marcos smiles at me"
+        "Marcos smiles at me."
     else:
-        "Marcos looks at me, serious"
+        "Marcos looks at me, serious."
 
-    robert "Jacob leaves with his three dogs: Hannah, Marcos and Lara"
+    robert "Jacob leaves with his three dogs: Hannah, Marcos and Lara."
     robert "I came this house yesterday and set..."
-    "Robert smiles at me"
+    "Robert smiles at me."
     robert "a little trap!"
     robert "I \"stole\" the \"golden sandwich\" from Jacob, his most precious belonging!"
-    robert "I made sure that it would look for the guilty among his dogs"
+    robert "I made sure that it would look for the guilty among his dogs."
     robert "But how would he find the evidences?"
     robert "Would he try to get all the info in a good, respectful way?"
     robert "Or would he abuse his powers to get to the truth?"
     robert "Let's find out with..."
     robert "Our dog jury!"
-    robert "Remember, boys and girls"
+    robert "Remember, boys and girls."
     robert "Now it's your turn to judge your human with a \"good woof\" or a \"bad woof\"!"
     robert "So..."
     pause 1.0
@@ -96,7 +96,7 @@ label ending:
     hannah "Well..."
     if hannah_ending == "good":
         hannah "It's a \"good woof\" from me!"
-        "Hannah smiles at me"
+        "Hannah smiles at me."
         hannah "He went so far as to fight a cat and get a medal for me to trust him!"
         hide hannah
         with dissolve
@@ -107,7 +107,7 @@ label ending:
     else:
         hannah "..."
         hannah "It's a \"bad woof\" from me!"
-        "Hannah looks at me"
+        "Hannah looks at me."
         hannah "Sorry, sir"
         "Hannah looks back at Robert"
         hannah "He pretended that there was a cat in my room!"
@@ -120,7 +120,7 @@ label ending:
         robert "That's really bad!"
     pause 1.0
 
-    robert "Ok"
+    robert "Ok."
     robert "What about you..."
     robert "...Marcos?"
     hide robert
@@ -129,20 +129,20 @@ label ending:
     with dissolve
     if marcos_ending == "good":
         marcos "It's a \"good woof\" from me!"
-        "Marcos smiles at me"
+        "Marcos smiles at me."
         marcos "He gave me a new brand microphone!"
         marcos "Now I can keep given my YouDog! subscribers a top quality content and..."
         hide marcos
         with dissolve
         show robert normal
         with dissolve
-        robert "Ok, ok, enough"
-        "Robert smiles at Marcos"
+        robert "Ok, ok, enough."
+        "Robert smiles at Marcos."
         robert "That's so sweet of him!"
     else:
         marcos "..."
         marcos "It's a \"bad woof\" from me!"
-        "Marcos at me. He looks angry"
+        "Marcos at me. He looks angry."
         marcos "It threatened me with reporting my YouDog! channel!"
         marcos "That could have meant the end for me!"
         marcos "And for my beloved subscribers, who are the best and..."
@@ -150,10 +150,10 @@ label ending:
         with dissolve
         show robert normal
         with dissolve
-        robert "Ok, ok"
+        robert "Ok, ok."
         pause 1.0
-        robert "That's... not cool"
-        "Robert looks at me"
+        robert "That's... not cool."
+        "Robert looks at me."
     pause 1.0
 
     robert "And finally..."
@@ -165,7 +165,7 @@ label ending:
     with dissolve
     if lara_ending == "good":
         lara "It's a \"good woof\" from me!"
-        "Lara smiles at me"
+        "Lara smiles at me."
         lara "He never do any excersice since he won that damn golden sandwich!"
         lara "But he did it for retrieving my smart bracelet in a nice way!"
         hide lara
@@ -176,26 +176,26 @@ label ending:
     else:
         lara "..."
         lara "It's a \"bad woof\" from me!"
-        "Lara at me. She looks angry"
+        "Lara at me. She looks angry."
         lara "He offered me cookies!"
         robert "But that..."
         lara "I can't resist cookies!"
         lara "If I eat one I have to eat all of them!"
-        lara "And then I forget about my training"
+        lara "And then I forget about my training."
         lara "It was very difficult for me to get over my adiction!"
         hide lara
         with dissolve
         show robert normal
         with dissolve
-        robert "Oh"
-        robert "Now I understand"
-        "Robert looks at me"
+        robert "Oh."
+        robert "Now I understand."
+        "Robert looks at me."
         robert "That was very mean of you, Jacob!"
     pause 1.0
 
     show robert normal
     with dissolve
-    robert "Well, that's all"
+    robert "Well, that's all."
     robert "The jury has spoken!"
     robert "We have... [good_endings] \"good woof\" out of 3!"
     robert "So..."
@@ -216,7 +216,7 @@ label ending:
         robert "Anywhere you go, all dogs will know that you are not a friend of us!"
         robert "Shame on you!"
 
-    "Robert looks directly to his invisible camera"
+    "Robert looks directly to his invisible camera."
     robert "That's all for tonight's program, my dears!"
     robert "Stay tuned next week for a new program of..."
     robert "\"The magical dog!\""
@@ -224,7 +224,7 @@ label ending:
 
     hide robert
     with dissolve
-    "Robert dissappears without saying anything else"
+    "Robert dissappears without saying anything else."
 
     if good_ending:
         "And I receive the approval and love of my beloved dogs!"
@@ -232,6 +232,6 @@ label ending:
         "And I am left with three dogs that I treated bad!"
         "How can I live with this?"
 
-    "THE END"
+    "THE END."
     "Made for the #1 Happy Jam on itch.io"
     return

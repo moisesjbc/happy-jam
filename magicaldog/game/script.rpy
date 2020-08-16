@@ -30,11 +30,11 @@ label start:
 
     show bg living room
     "Hi!"
-    "My name is Jacob. I'm 20"
-    "A year ago I won a world record eating the highest number of sandwiches in my garage"
-    "It hurted and I developed a \"sandwich-phobia\""
+    "My name is Jacob. I'm 20."
+    "A year ago I won a world record eating the highest number of sandwiches in my garage."
+    "It hurted and I developed a \"sandwich-phobia\"."
     "But I am rich now!"
-    "Since then I live in a mansion with my three dogs"
+    "Since then I live in a mansion with my three dogs."
 
     show hannah normal at left
     with dissolve
@@ -48,7 +48,7 @@ label start:
     with dissolve
     "...and Lara"
 
-    "A few days ago I went into the kitchen and discovered something"
+    "A few days ago I went into the kitchen and discovered something."
 
     # Cookies jar animation
     show bg kitchen
@@ -63,11 +63,11 @@ label start:
         linear 0.1 xpos 350 ypos 800
     pause 2.0
 
-    "It seems that one of them is a magical dog"
+    "It seems that one of them is a magical dog..."
     "...or maybe all of them!"
-    "No one of them said anything"
+    "No one of them said anything."
     "But it's cool for me!"
-    "They are good dogs and I respect their privacy"
+    "They are good dogs and I respect their privacy."
     "..."
     "But yesterday in the night hapenned something bad..."
     "I checked the camera on my room and..."
@@ -96,11 +96,11 @@ label dog_selector_menu:
     "Who should I question now?"
 
     menu:
-        "Obviously Hannah":
+        "Obviously Hannah.":
             jump hannah
-        "Marcos, of course":
+        "Marcos, of course.":
             jump marcos
-        "Lara, Du'uh":
+        "Lara, Du'uh.":
             jump lara
         "In fact, I think that I reached a verdict!" if hannah_ending != None and marcos_ending != None and lara_ending != None:
             jump ending
