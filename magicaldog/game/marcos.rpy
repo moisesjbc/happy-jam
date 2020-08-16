@@ -12,6 +12,7 @@ init:
 
 
 label marcos:
+    play music "audio/marcos_theme.ogg"
     scene bg marcos bedroom
     with dissolve
 

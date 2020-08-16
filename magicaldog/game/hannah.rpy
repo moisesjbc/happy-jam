@@ -13,6 +13,7 @@ init:
 
 
 label hannah:
+    play music "audio/hannah_theme.ogg"
     scene bg hannah bedroom
     with dissolve
 

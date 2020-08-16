@@ -12,6 +12,7 @@ init:
 
 
 label lara:
+    play music "audio/lara_theme.ogg"
     scene bg lara bedroom
     with dissolve
 

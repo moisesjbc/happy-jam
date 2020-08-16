@@ -90,6 +90,7 @@ label steal:
     "I am going to discover the culprit, no matter what!"
 
 label dog_selector_menu:
+    play music "audio/music.ogg"
     scene bg living room
 
     "Who should I question now?"

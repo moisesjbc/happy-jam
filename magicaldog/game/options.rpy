@@ -30,11 +30,13 @@ define config.version = "0.1.1"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-    Made by Moisés J. Bonilla Caraballo ({a=https://www.moisesjose.com/}web{/a})
+    Developed by Moisés J. Bonilla Caraballo ({a=https://www.moisesjose.com/}web{/a})
     for the {a=https://itch.io/jam/happy-gamejam}1# Happy Jam on itch.io{/a}
 
     # Software used:\n
         - {a=www.gimp.org}Gimp{/a}
+        - {a=https://lmms.io/}LMMS{/a}
+        - {a=https://www.audacityteam.org/}Audacity{/a}
 """)
 
 

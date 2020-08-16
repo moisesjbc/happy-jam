@@ -12,9 +12,11 @@ Jacob lives in his mansion with his three dogs: Hannah, Marcos and Lara. They li
 
 ## Credits
 
-Idea, programming and graphics by Moisés J. Bonilla Caraballo ([web](https://www.moisesjose.com))
+Idea, programming, graphics and music by Moisés J. Bonilla Caraballo ([web](https://www.moisesjose.com))
 
 ### Software used
 
 - [Ren'Py](https://www.renpy.org/)
 - [Gimp](http://www.gimp.org/)
+- [LMMS](https://lmms.io/)
+- [Audacity](https://www.audacityteam.org/)
