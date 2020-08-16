@@ -253,6 +253,7 @@ label marcos_dialogue_menu:
             pause 1.0
             "Doesn't the neighbour have a cat?"
             "Fight the neigbour's cat?"
+            play music "audio/marcos_theme.ogg"
             menu:
                 "Yes!":
                     pass
@@ -267,10 +268,12 @@ label marcos_dialogue_menu:
             "looking for my victim"
             "like a ninja..."
             jacob "Wait, where is he?"
+            stop music
             show bg neighbour garden cat
             with dissolve
             pause 1.0
             jacob "F"
+            play music "audio/cat_theme.ogg"
             cat "MEEEEEOOOOOW"
             with hpunch
             "Oh my"
@@ -294,6 +297,7 @@ label marcos_dialogue_menu:
             "I get the medal and return to Marcos' bedroom"
             $ inventory.append("dog medal")
             show screen notify(message="Dog medal added to inventory")
+            play music "audio/marcos_theme.ogg"
             scene bg marcos bedroom
             show marcos normal
             with dissolve
