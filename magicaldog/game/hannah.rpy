@@ -34,7 +34,7 @@ label hannah_dialogue_menu:
         "\"[basic_dialogue_last_night_notice_something!t]\"":
             jacob "[basic_dialogue_last_night_notice_something!t]"
             hannah "In fact I did, sir"
-            hannah "I saw Lara burrying something in the garden"
+            hannah "I saw Lara burying something in the garden"
             "Mmm..."
 
         "[basic_dialogue_throw_ball!t]":
@@ -106,15 +106,15 @@ label hannah_dialogue_menu:
                     jump investigate_hannah_record
 
         "Talk with her about the security system log" if hannah_clue_record_investigated:
-            jacob "According to the log on the secutiry system..."
+            jacob "According to the log on the security system..."
             hannah "Yes, sir?"
             jacob "Someone came by and you left the room with he or she"
             hannah "Impossible!"
-            "Hannah checks the logs from the secutiry system"
+            "Hannah checks the logs from the security system"
             "She looks surprise"
             hannah "This cannot be!"
             jacob "What do you mean?"
-            jacob "Don't you left the room last night?"
+            jacob "Didn't you leave the room last night?"
             hannah "No, sir!"
             hannah "Something must be wrong with the system"
             hannah "I spent all the night here, as always!"
@@ -132,7 +132,7 @@ label hannah_dialogue_menu:
             jacob "And a sleepmagician?..."
             hannah "What?"
             jacob "Nothing!"
-            hannah "What the cameras on your room show, sir?"
+            hannah "What do the cameras on your room show, sir?"
             jacob "They..."
             "I don't want to mention the floating golden sandwich. Just in case"
             jacob "It's strange"

@@ -56,7 +56,7 @@ label ending:
     robert "And welcome to my program \"The magical dog!\""
     "He proceeds to look directly to some invisible camera"
 
-    robert "For those of you who doesn't know me"
+    robert "For those of you who don't know me"
     robert "I am a 30 years old dog!"
     robert "\"How is that?\" you might be wondering"
     robert "Well, 25 years ago I ate 55 lemons and I got magical powers!"
@@ -144,7 +144,7 @@ label ending:
         marcos "It's a \"bad woof\" from me!"
         "Marcos at me. He looks angry"
         marcos "It threatened me with reporting my YouDog! channel!"
-        marcos "That could have mean the end for me!"
+        marcos "That could have meant the end for me!"
         marcos "And for my beloved subscribers, who are the best and..."
         hide marcos
         with dissolve
@@ -209,7 +209,7 @@ label ending:
         robert "Enjoy it!"
     else:
         robert "You have proven yourself to be a bad human!"
-        robert "Your dogs certainly deserves better!"
+        robert "Your dogs certainly deserve better!"
         robert "As a punishment..."
         robert "You won't have you golden sandwich back!"
         robert "And you get the title of \"bad human\"!"
@@ -218,7 +218,7 @@ label ending:
 
     "Robert looks directly to his invisible camera"
     robert "That's all for tonight's program, my dears!"
-    robert "Stay tunned next week for a new program of..."
+    robert "Stay tuned next week for a new program of..."
     robert "\"The magical dog!\""
     robert "Bye!"
 

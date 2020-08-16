@@ -69,7 +69,7 @@ label marcos_dialogue_menu:
             marcos "I have been working my ass for years and now I am starting to take off"
             marcos "Wait and you'll see!"
             "So that's what happening"
-            "Maybe it stole the golden sandwich out of jealousy?"
+            "Maybe he stole the golden sandwich out of jealousy?"
             jump marcos_dialogue_menu
 
         "\"[basic_dialogue_last_night_notice_something!t]\"":
@@ -93,7 +93,7 @@ label marcos_dialogue_menu:
             marcos "GRRRRRRRRRRRR"
             marcos "mfkmfdalfffggggrrrrrr"
             marcos "Here you go"
-            "He handle to me another mess of paper strips and dog's drool"
+            "He handles to me another mess of paper strips and dog's drool"
             jacob "This..."
             marcos "It's a dolphin"
             jacob "Oh"
@@ -124,7 +124,7 @@ label marcos_dialogue_menu:
             marcos "And I know that you are afraid that I could exceed your number of followers"
             marcos "You might sabotage me!"
             jacob "What?"
-            jacob "No sense!"
+            jacob "Nonsense!"
             marcos "Maybe, but it's what I feel"
             jacob "*Sigh*"
             marcos "Anyways"

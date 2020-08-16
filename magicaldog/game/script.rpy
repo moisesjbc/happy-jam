@@ -85,7 +85,7 @@ label steal:
     "My rock!"
     "*Sigh*"
     "That's it!"
-    "I am going to discover the guilty, no matter what!"
+    "I am going to discover the culprit, no matter what!"
 
 label dog_selector_menu:
     scene bg living room
