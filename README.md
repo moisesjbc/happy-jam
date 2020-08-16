@@ -20,3 +20,7 @@ Idea, programming, graphics and music by Moisés J. Bonilla Caraballo ([web](htt
 - [Gimp](http://www.gimp.org/)
 - [LMMS](https://lmms.io/)
 - [Audacity](https://www.audacityteam.org/)
+
+### Thanks
+
+Thanks to Omar and Alejandro for testing the game and giving feedback!

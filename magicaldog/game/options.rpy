@@ -37,6 +37,8 @@ define gui.about = _p("""
         - {a=www.gimp.org}Gimp{/a}
         - {a=https://lmms.io/}LMMS{/a}
         - {a=https://www.audacityteam.org/}Audacity{/a}
+
+    Thanks to Omar and Alejandro for testing the game and giving feedback!
 """)
 
 
