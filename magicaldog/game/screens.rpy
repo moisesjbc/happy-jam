@@ -207,7 +207,7 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
-    if len(items) >= 5:
+    if len(items) > 8:
         viewport:
             draggable True
             mousewheel True
