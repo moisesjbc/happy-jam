@@ -34,9 +34,8 @@ define gui.about = _p("""
     for the {a=https://itch.io/jam/happy-gamejam}1# Happy Jam on itch.io{/a}
 
     # Software used:\n
-        - {a=www.gimp.org}Gimp{/a}
+        - {a=www.gimp.org}Gimp{/a}\n
         - {a=https://lmms.io/}LMMS{/a}
-        - {a=https://www.audacityteam.org/}Audacity{/a}
 
     Thanks to Omar and Alejandro for testing the game and giving feedback!
 """)

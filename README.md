@@ -19,7 +19,6 @@ Idea, programming, graphics and music by Moisés J. Bonilla Caraballo ([web](htt
 - [Ren'Py](https://www.renpy.org/)
 - [Gimp](http://www.gimp.org/)
 - [LMMS](https://lmms.io/)
-- [Audacity](https://www.audacityteam.org/)
 
 ### Thanks
 
